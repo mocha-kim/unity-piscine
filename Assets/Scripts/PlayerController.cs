@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,8 +10,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 _dirVector = Vector3.zero;
 
     private bool _isGrounded = true;
-    private readonly float _jumpHeight = 0.75f;
-    private readonly float _gravity = -9.8f;
+    private readonly float _jumpHeight = 1.5f;
+    private readonly float _gravity = -20f;
     private CharacterController _controller;
 
     private void Awake()
@@ -36,4 +37,12 @@ public class PlayerController : MonoBehaviour
         
         _controller.Move((_dirVector + move * _speed) * Time.deltaTime);
     }
+
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    if (hit.gameObject.CompareTag("Lava"))
+    //    {
+    //        Debug.Log("lava");
+    //    }
+    //}
 }
