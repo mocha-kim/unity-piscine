@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private KeyCode selectKey;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private float speed = 10.0f;
+    [SerializeField] private float speed = 20.0f;
     
     private bool _isActivate = false;
     private bool _isGrounded = true;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(selectKey))
         {
             CameraMove.Instance.SetTarget(gameObject);
-            _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
         if (_isActivate)
