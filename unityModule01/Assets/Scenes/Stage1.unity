@@ -251,13 +251,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 670559273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26796467b0ac54707b9dd2adefc0ebe2, type: 3}
+  m_Script: {fileID: 11500000, guid: f54161724509646e6af362f1ceea20d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpPower: 10
   selectKey: 49
   offset: {x: -3, y: 1, z: -3}
+  speed: 5
 --- !u!54 &670559275
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -307,7 +306,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e297181587a8b40928e7e05666b3a890, type: 2}
+  - {fileID: 2100000, guid: f8d85892087be452181880e289c0b7dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -540,7 +539,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4884ae28ab9143bc99ed871e35f5f65, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f6c84954ec934c01af28fdded7f4347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1292783683
@@ -573,13 +572,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292783683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26796467b0ac54707b9dd2adefc0ebe2, type: 3}
+  m_Script: {fileID: 11500000, guid: f54161724509646e6af362f1ceea20d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
-  jumpPower: 10
   selectKey: 51
   offset: {x: 0, y: 0.5, z: 2}
+  speed: 7.5
 --- !u!54 &1292783685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -629,7 +627,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 77b6e0bdb284645258b179658a87cdd7, type: 2}
+  - {fileID: 2100000, guid: 96ba59a5affd9483eab7ffad6a7ead99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -704,13 +702,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1581839657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26796467b0ac54707b9dd2adefc0ebe2, type: 3}
+  m_Script: {fileID: 11500000, guid: f54161724509646e6af362f1ceea20d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 10
   selectKey: 50
   offset: {x: 3, y: 1, z: -1}
+  speed: 10
 --- !u!54 &1581839659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -760,7 +757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c8be398e0af1445b2b6db6c7e850da5f, type: 2}
+  - {fileID: 2100000, guid: 465f5d45924d94103ab720ffcb6eeaf5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
