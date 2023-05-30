@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10.0f;
-    [SerializeField] private float jumpPower = 5.0f;
     [SerializeField] private KeyCode selectKey;
     [SerializeField] private Vector3 offset;
+    [SerializeField] private float speed = 10.0f;
     
     private bool _isActivate = false;
+    private bool _isGrounded = true;
+    private float _jumpPower = 5.0f;
+    
     private float _horizontal;
     private Vector3 _dirVector;
 
@@ -41,9 +43,10 @@ public class PlayerController : MonoBehaviour
             _dirVector = new(_horizontal, 0f, 0f);
             _dirVector *= speed * Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
             {
-                _rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+                _rigidbody.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
+                _isGrounded = false;
             }
         }
     }
@@ -59,6 +62,14 @@ public class PlayerController : MonoBehaviour
         if (!isActive)
         {
             _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = true;
         }
     }
 }

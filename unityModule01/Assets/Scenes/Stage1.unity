@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 15418948}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 15418947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 670559274}
   m_Layer: 0
   m_Name: Claire
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpPower: 5
+  jumpPower: 10
   selectKey: 49
   offset: {x: -3, y: 1, z: -3}
 --- !u!54 &670559275
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 1292783684}
   m_Layer: 0
   m_Name: Thomas
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26796467b0ac54707b9dd2adefc0ebe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 5
+  speed: 7.5
+  jumpPower: 10
   selectKey: 51
   offset: {x: 0, y: 0.5, z: 2}
 --- !u!54 &1292783685
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 1581839658}
   m_Layer: 0
   m_Name: John
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -707,8 +707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26796467b0ac54707b9dd2adefc0ebe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
-  jumpPower: 5
+  speed: 10
+  jumpPower: 10
   selectKey: 50
   offset: {x: 3, y: 1, z: -1}
 --- !u!54 &1581839659
