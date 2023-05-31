@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     
     private float _jumpPower = 5.0f;
     private float _horizontal;
-    private Vector3 _dirVector;
+    [SerializeField] private Vector3 _dirVector;
     private Rigidbody _rigidbody;
 
     void Awake()
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Exit"))
         {
             _isGrounded = true;
         }

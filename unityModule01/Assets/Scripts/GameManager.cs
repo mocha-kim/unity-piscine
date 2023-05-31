@@ -12,11 +12,13 @@ public class GameManager : MonoBehaviour
     private readonly int _maxIndex = 2;
     private int _stageIndex = 1;
 
+    private GameObject _playerGroup;
     [SerializeField] private int _totalCount;
     private int _exitCount;
     private WaitForSeconds _wait = new WaitForSeconds(2.0f);
 
     private bool IsAllExited => _exitCount >= _totalCount;
+    public GameObject PlayerGroup => _playerGroup;
 
     #endregion
 
@@ -64,8 +66,9 @@ public class GameManager : MonoBehaviour
 
     private void InitExitState()
     {
+        _playerGroup = GameObject.FindWithTag("PlayerGroup");
         _exitCount = 0;
-        _totalCount = GameObject.FindWithTag("PlayerGroup").transform.childCount;
+        _totalCount = _playerGroup.transform.childCount;
     }
 
     private void LoadNextStage()
