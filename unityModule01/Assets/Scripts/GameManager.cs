@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
-    private readonly int _maxIndex = 2;
-    private int _stageIndex = 1;
+    private readonly int _maxIndex = 3;
+    private int _stageIndex = 3;
 
     private GameObject _playerGroup;
     [SerializeField] private int _totalCount;
@@ -72,8 +72,9 @@ public class GameManager : MonoBehaviour
 
     private void LoadNextStage()
     {
-        SceneManager.LoadScene("Stage" + (_stageIndex % _maxIndex + 1));
         _stageIndex++;
+        _stageIndex = _stageIndex % (_maxIndex - 1) + 1;
+        SceneManager.LoadScene("Stage" + _stageIndex);
     }
 
     #endregion
