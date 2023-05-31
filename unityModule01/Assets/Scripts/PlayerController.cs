@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("exit"))
         {
             _isGrounded = true;
         }
