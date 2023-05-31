@@ -1,27 +1,24 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private KeyCode selectKey;
-    [SerializeField] private Vector3 offset;
     [SerializeField] private float speed = 20.0f;
+    
+    private Vector3 offset;
     
     private bool _isActivate = false;
     private bool _isGrounded = true;
-    private float _jumpPower = 5.0f;
     
+    private float _jumpPower = 5.0f;
     private float _horizontal;
     private Vector3 _dirVector;
-
     private Rigidbody _rigidbody;
 
-    void Start()
+    void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        gameObject.transform.position = offset;
+        offset = gameObject.transform.position;
     }
 
     void Update()
@@ -67,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player"))
         {
             _isGrounded = true;
         }
