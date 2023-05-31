@@ -61,6 +61,12 @@ public class GameManager : MonoBehaviour
         _exitCount--;
     }
 
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+        _playerGroup.SetActive(false);
+    }
+
     #endregion
 
     #region Private Methods
