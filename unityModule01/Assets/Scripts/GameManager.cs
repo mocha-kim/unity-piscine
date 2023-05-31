@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Color = Module01.Interaction.Color;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,9 +15,13 @@ public class GameManager : MonoBehaviour
     private int _stageIndex = 3;
 
     private GameObject _playerGroup;
-    [SerializeField] private int _totalCount;
+    private int _totalCount;
     private int _exitCount;
-    private WaitForSeconds _wait = new WaitForSeconds(2.0f);
+
+    [SerializeField] private Material blue;
+    [SerializeField] private Material yellow;
+    [SerializeField] private Material red;
+    private Dictionary<Color, Material> _colorDictionary = new ();
 
     private bool IsAllExited => _exitCount >= _totalCount;
     public GameObject PlayerGroup => _playerGroup;
@@ -36,12 +43,33 @@ public class GameManager : MonoBehaviour
         }
         
         InitExitState();
+        _colorDictionary[Color.Blue] = blue;
+        _colorDictionary[Color.Yellow] = yellow;
+        _colorDictionary[Color.Red] = red;
     }
 
     #endregion
 
     #region Public Methods
 
+    public Material GetMaterial(Color color) => _colorDictionary[color];
+
+    public int GetLayer(Color color)
+    {
+        switch (color)
+        {
+            case Color.Blue:
+                return 7;
+            case Color.Yellow:
+                return 9;
+            case Color.Red:
+                return 11;
+            case Color.Default:
+            default:
+                return 0;
+        }
+    }
+    
     public void AlignPlayerExit(string name)
     {
         _exitCount++;
