@@ -11,9 +11,10 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
-    private readonly int _maxIndex = 4;
-    private int _stageIndex = 4;
+    private readonly int _maxIndex = 5;
+    private int _stageIndex = 1;
 
+    private GameObject _camera;
     private GameObject _playerGroup;
     private int _totalCount;
     private int _exitCount;
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         
-        InitExitState();
+        Initialize();
     }
 
     #endregion
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Stage " + _stageIndex + " Clear!");
 
             LoadNextStage();
-            InitExitState();
+            Initialize();
         }
     }
 
@@ -64,15 +65,19 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
+        _camera.GetComponent<CameraMove>().StopMove();
         _playerGroup.SetActive(false);
     }
+
+    public void StopCamera() => _camera.GetComponent<CameraMove>().StopMove();
 
     #endregion
 
     #region Private Methods
 
-    private void InitExitState()
+    private void Initialize()
     {
+        _camera = GameObject.Find("Main Camera");
         _playerGroup = GameObject.FindWithTag("PlayerGroup");
         _exitCount = 0;
         _totalCount = _playerGroup.transform.childCount;
@@ -83,6 +88,7 @@ public class GameManager : MonoBehaviour
         _stageIndex++;
         _stageIndex = _stageIndex % (_maxIndex - 1) + 1;
         SceneManager.LoadScene("Stage" + _stageIndex);
+        Initialize();
     }
 
     #endregion

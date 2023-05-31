@@ -5,6 +5,7 @@ public class CameraMove : MonoBehaviour
     private static CameraMove _instance;
     public static CameraMove Instance => _instance;
 
+    private bool _isMoving = true;
     private float _speed = 3.0f;
     private Vector3 _offset = new Vector3(0f, 1.5f, -3f);
     private GameObject _target;
@@ -24,15 +25,18 @@ public class CameraMove : MonoBehaviour
         _target.GetComponent<PlayerController>().SetActive(true);
     }
 
-    private void LateUpdate()
-    {
-        transform.position = Vector3.Lerp(transform.position, _offset + _target.transform.position, Time.deltaTime + _speed);
-    }
+    public void StopMove() => _isMoving = false;
 
     public void SetTarget(GameObject target)
     {
         _target.GetComponent<PlayerController>().SetActive(false);
         _target = target;
         _target.GetComponent<PlayerController>().SetActive(true);
+    }
+    
+    private void LateUpdate()
+    {
+        if (!_isMoving) return;
+        transform.position = Vector3.Lerp(transform.position, _offset + _target.transform.position, Time.deltaTime + _speed);
     }
 }
