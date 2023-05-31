@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(selectKey))
         {
             CameraMove.Instance.SetTarget(gameObject);
-            _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            _rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
         }
 
         if (_isActivate)
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("exit"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player"))
         {
             _isGrounded = true;
         }

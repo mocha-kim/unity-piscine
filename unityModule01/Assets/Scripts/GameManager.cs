@@ -9,11 +9,12 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
-    private readonly int _maxIndex = 1;
+    private readonly int _maxIndex = 2;
     private int _stageIndex = 1;
 
     [SerializeField] private int _totalCount;
     private int _exitCount;
+    private WaitForSeconds _wait = new WaitForSeconds(2.0f);
 
     private bool IsAllExited => _exitCount >= _totalCount;
 

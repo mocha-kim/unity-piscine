@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6726785171378371243}
   - component: {fileID: 6726785171378371244}
   - component: {fileID: 6726785171378371245}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &6726785171378371245
 MonoBehaviour:
