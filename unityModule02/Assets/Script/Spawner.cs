@@ -6,15 +6,31 @@ namespace Module02
 {
     public class Spawner : MonoBehaviour
     {
-        [SerializeField] private GameObject enemyPrefab; 
-        void Start()
+        private int _objectCount = 0;
+        private int _maxCount = 10;
+        private float _elapsedTime = 0f;
+
+        [SerializeField] private float duration = 2.0f;
+        [SerializeField] private GameObject enemyPrefab;
+
+        private void Update()
         {
-
-        }
-
-        void Update()
-        {
-
+            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime >= duration)
+            {
+                if (GameManager.Instance.IsGameOver)
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
+                _elapsedTime = 0f;
+                if (_objectCount < _maxCount)
+                {
+                    Enemy enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform).GetComponent<Enemy>();
+                    enemy.SetSpawner(gameObject);
+                    _objectCount++;
+                }
+            }
         }
     }
 }
