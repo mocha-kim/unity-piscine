@@ -475,7 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c98a9dea47b46f28fa67b327656dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalCount: 0
 --- !u!4 &677914068
 Transform:
   m_ObjectHideFlags: 0
@@ -655,6 +654,10 @@ PrefabInstance:
     - target: {fileID: 6726785171378371244, guid: 13200a5c259534a9b8790c85c8271d14, type: 3}
       propertyPath: m_Mass
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726785171378371245, guid: 13200a5c259534a9b8790c85c8271d14, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6726785171378371245, guid: 13200a5c259534a9b8790c85c8271d14, type: 3}
       propertyPath: selectKey

@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             _horizontal = Input.GetAxis("Horizontal");
             _dirVector = new(_horizontal, 0f, 0f);
-            _dirVector *= speed * Time.deltaTime;
+            _dirVector *= speed;
 
             if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
             {
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + _dirVector);
+        _rigidbody.MovePosition(_rigidbody.position + _dirVector * Time.fixedDeltaTime);
     }
 
     public void SetActive(bool isActive)

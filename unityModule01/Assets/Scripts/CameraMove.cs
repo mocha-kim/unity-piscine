@@ -5,7 +5,7 @@ public class CameraMove : MonoBehaviour
     private static CameraMove _instance;
     public static CameraMove Instance => _instance;
 
-    private bool _isMoving = true;
+    private bool _isMoving = false;
     private float _speed = 3.0f;
     private Vector3 _offset = new Vector3(0f, 1.5f, -3f);
     private GameObject _target;
@@ -20,18 +20,18 @@ public class CameraMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        _target = GameObject.Find("Thomas");
-        _target.GetComponent<PlayerController>().SetActive(true);
+
+        _target = null;
     }
 
     public void StopMove() => _isMoving = false;
 
     public void SetTarget(GameObject target)
     {
-        _target.GetComponent<PlayerController>().SetActive(false);
+        _target?.GetComponent<PlayerController>().SetActive(false);
         _target = target;
         _target.GetComponent<PlayerController>().SetActive(true);
+        _isMoving = true;
     }
     
     private void LateUpdate()
