@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Reset") > 0f)
         {
             gameObject.transform.position = offset;
+			_isActivate = false;
+			_isGrounded = true;
         }
         
         if (Input.GetKeyDown(selectKey))
@@ -50,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + _dirVector * Time.fixedDeltaTime);
+        _rigidbody.MovePosition(_rigidbody.position + _dirVector * Time.deltaTime);
     }
 
     public void SetActive(bool isActive)

@@ -7,6 +7,7 @@ public class CameraMove : MonoBehaviour
 
     private bool _isMoving = false;
     private float _speed = 3.0f;
+    private Vector3 _init = new Vector3(0f, 5, -10f);
     private Vector3 _offset = new Vector3(0f, 1.5f, -3f);
     private GameObject _target;
     
@@ -32,6 +33,21 @@ public class CameraMove : MonoBehaviour
         _target = target;
         _target.GetComponent<PlayerController>().SetActive(true);
         _isMoving = true;
+    }
+
+    private void Update()
+    {
+        if (Input.GetAxis("Reset") > 0f)
+        {
+            _target = null;
+            _isMoving = false;
+            transform.position = _init;
+        }
+
+        if (GameManager.Instance.IsGameOver)
+        {
+            StopMove();
+        }
     }
     
     private void LateUpdate()

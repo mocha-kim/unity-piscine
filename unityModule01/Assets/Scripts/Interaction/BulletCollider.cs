@@ -19,6 +19,7 @@ namespace Module01.Interaction
             if (other.gameObject.CompareTag("Player"))
             {
                 GameManager.Instance.GameOver();
+				other.gameObject.SetActive(false);
                 _parent.transform.parent.gameObject.SetActive(false);
             }
             else if (other.gameObject.CompareTag("Obstacle"))

@@ -12,15 +12,15 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => _instance;
 
     private readonly int _maxIndex = 5;
-    private int _stageIndex = 1;
+    private int _stageIndex = 4;
 
-    private GameObject _camera;
     private GameObject _playerGroup;
     private int _totalCount;
     private int _exitCount;
 
     private bool IsAllExited => _exitCount >= _totalCount;
     public GameObject PlayerGroup => _playerGroup;
+	public bool IsGameOver { get; private set; }
 
     #endregion
 
@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("Stage " + _stageIndex + " Clear!");
 
             LoadNextStage();
-            Initialize();
         }
     }
 
@@ -65,11 +64,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
-        _camera.GetComponent<CameraMove>().StopMove();
-        _playerGroup.SetActive(false);
+		IsGameOver = true;
     }
 
-    public void StopCamera() => _camera.GetComponent<CameraMove>().StopMove();
+    public void StopCamera() => IsGameOver = true;
 
     #endregion
 
@@ -77,18 +75,16 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        _camera = GameObject.Find("Main Camera");
         _playerGroup = GameObject.FindWithTag("PlayerGroup");
         _exitCount = 0;
         _totalCount = _playerGroup.transform.childCount;
+		IsGameOver = false;
     }
 
     private void LoadNextStage()
     {
-        _stageIndex++;
-        _stageIndex = _stageIndex % (_maxIndex - 1) + 1;
+        _stageIndex = _stageIndex % _maxIndex + 1;
         SceneManager.LoadScene("Stage" + _stageIndex);
-        Initialize();
     }
 
     #endregion

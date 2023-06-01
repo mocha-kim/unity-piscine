@@ -648,9 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c98a9dea47b46f28fa67b327656dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue: {fileID: 2100000, guid: f8d85892087be452181880e289c0b7dd, type: 2}
-  yellow: {fileID: 2100000, guid: 465f5d45924d94103ab720ffcb6eeaf5, type: 2}
-  red: {fileID: 2100000, guid: 96ba59a5affd9483eab7ffad6a7ead99, type: 2}
+  _camera: {fileID: 0}
 --- !u!4 &677914068
 Transform:
   m_ObjectHideFlags: 0

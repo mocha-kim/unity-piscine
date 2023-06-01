@@ -9,6 +9,7 @@ public class Trap : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.SetActive(false);
             GameManager.Instance.GameOver();
         }
     }
