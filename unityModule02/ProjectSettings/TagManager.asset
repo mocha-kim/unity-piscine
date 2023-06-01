@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 4197014899
+    locked: 0
+  - name: Shadow
+    uniqueID: 4150169349
+    locked: 0
+  - name: Road
+    uniqueID: 3331627241
+    locked: 0
+  - name: Object
+    uniqueID: 3265024595
+    locked: 0
+  - name: Character
+    uniqueID: 63661205
+    locked: 0
