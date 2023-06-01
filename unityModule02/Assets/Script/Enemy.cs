@@ -14,6 +14,11 @@ namespace Module02
 
         private void Update()
         {
+            if (GameManager.Instance.IsGameOver)
+            {
+                Destroy(gameObject);
+                return;
+            }
             transform.position += _moveVector * Time.deltaTime;
         }
 
