@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1d6d87-60aa-4d57-bf0a-b4d36a6d1b64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/UI/SquareUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/UI/SquareUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/UI/SummonSlotUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/UI/SummonSlotUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Base.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Base.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Characters.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Characters.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Dust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Dust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/UI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/UI.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/map01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/map01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TilesPlaettes/Map1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TilesPlaettes/Map1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -86,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685718264864</updated>
       <workItem from="1685718266894" duration="7000" />
-      <workItem from="1685718573692" duration="552000" />
+      <workItem from="1685718573692" duration="7557000" />
     </task>
     <servers />
   </component>
