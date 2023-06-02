@@ -11,7 +11,13 @@ namespace Module02
         private GameObject _spawner;
         
         [SerializeField] private float damage = 3.0f;
+		[SerializeField] private float speed = 2.0f;
         [SerializeField] private Vector3 _moveVector = Vector3.down;
+
+		private void Start()
+		{
+			_moveVector *= speed;
+		}
 
         private void Update()
         {

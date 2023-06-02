@@ -6,7 +6,7 @@ namespace Module02
 {
 	public class Bullet : MonoBehaviour
 	{
-	    private float _speed = 5.0f;
+	    private float _speed = 10.0f;
 		private float _damage = 1.0f;
 		private float _angle;
 	    private Vector3 _direction;
