@@ -83,8 +83,10 @@ namespace Module02.UI
             {
                 return;
             }
-            
-            MouseData.draggingItem.GetComponent<RectTransform>().position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector3 imgPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            imgPosition.z = 80.0f;
+            MouseData.draggingItem.GetComponent<RectTransform>().position = imgPosition;
         }
 
         private void OnEndDrag(GameObject slot)
