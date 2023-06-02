@@ -8,7 +8,7 @@ namespace Module02
 	public class Turret : MonoBehaviour
 	{
 		private float _elapsedTime = 0f;
-		private GameObject _closestTarget;
+		[SerializeField] private GameObject _closestTarget;
 		private CircleCollider2D _collider;
 		private List<GameObject> _targetsInRange = new ();
 
@@ -25,13 +25,19 @@ namespace Module02
 
    	 	private void Update()
    	 	{
+            if (GameManager.Instance.IsGameOver)
+			{
+				Destroy(gameObject);
+			}
+
         	_elapsedTime += Time.deltaTime;
         	if (_elapsedTime >= duration)
         	{
             	_elapsedTime = 0f;
-            	if (GameManager.Instance.IsGameOver) return;
-
+				
+				DetectTarget();
 				if (_closestTarget == null) return;
+
                 Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform).GetComponent<Bullet>();
                 bullet.Fire(_closestTarget, damage);
         	}
@@ -42,7 +48,6 @@ namespace Module02
 			if (other.gameObject.CompareTag("Enemy"))
 			{
 				_targetsInRange.Add(other.gameObject);
-				DetectTarget();
 			}
 		}
 
@@ -51,15 +56,15 @@ namespace Module02
 			if (other.gameObject.CompareTag("Enemy"))
 			{
 				_targetsInRange.Remove(other.gameObject);
-				DetectTarget();
 			}
 		}
 
 		private void DetectTarget()
 		{
-			_closestTarget = _targetsInRange.OrderBy(obj => {
-            	return Vector3.Distance(transform.position, obj.transform.position);
+			_closestTarget = _targetsInRange.OrderBy(target => {
+            	return Vector3.Distance(transform.position, target.transform.position);
         		}).FirstOrDefault();
+			Debug.Log("Target Update: " + gameObject);
 		}
 	}
 }
