@@ -64,7 +64,6 @@ namespace Module02
 			_closestTarget = _targetsInRange.OrderBy(target => {
             	return Vector3.Distance(transform.position, target.transform.position);
         		}).FirstOrDefault();
-			Debug.Log("Target Update: " + gameObject);
 		}
 	}
 }
