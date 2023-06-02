@@ -5,13 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca36bc65-c7e3-4b21-9fa4-d27db41da54a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/Destroy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/Destroy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/Dust.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/Dust.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/MagicBlue.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/MagicBlue.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/MagicRed.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Particles/MagicRed.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Base.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Base.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Characters.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Characters.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Dust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Dust.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/UI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/UI.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Bullet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Bullet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Turret.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Turret.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unityModule02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unityModule02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS/Examble 1b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS/Examble 1b.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS/Example 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS/Example 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Forest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Forest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Plataformer Painted Style.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Plataformer Painted Style.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Runner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Runner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Snowy Forest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Snowy Forest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/changelog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/changelog.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/contact.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/contact.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/readme.txt.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Base.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/IDamagable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/IDamagable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TilesPlaettes/Map1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TilesPlaettes/Map1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +70,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Base.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/IDamagable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -36,26 +86,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/sunhkim/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
-      "/Users/sunhkim/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
-      "/Users/sunhkim/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/sunhkim/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/sunhkim/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/sunhkim/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/MacOS/Unity" />
@@ -104,6 +156,10 @@
       <updated>1685613809368</updated>
       <workItem from="1685613812397" duration="338000" />
       <workItem from="1685628827630" duration="6064000" />
+      <workItem from="1685678974716" duration="792000" />
+      <workItem from="1685679781557" duration="518000" />
+      <workItem from="1685680412029" duration="456000" />
+      <workItem from="1685680888457" duration="47000" />
     </task>
     <servers />
   </component>
@@ -113,6 +169,11 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

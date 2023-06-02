@@ -7,9 +7,9 @@ namespace Module02
     public class Spawner : MonoBehaviour
     {
         private int _objectCount = 0;
-        private int _maxCount = 10;
         private float _elapsedTime = 0f;
 
+        [SerializeField] private int maxCount = 20;
         [SerializeField] private float duration = 2.0f;
         [SerializeField] private GameObject enemyPrefab;
 
@@ -24,7 +24,7 @@ namespace Module02
                     return;
                 }
                 _elapsedTime = 0f;
-                if (_objectCount < _maxCount)
+                if (_objectCount < maxCount)
                 {
                     Enemy enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform).GetComponent<Enemy>();
                     enemy.SetSpawner(gameObject);

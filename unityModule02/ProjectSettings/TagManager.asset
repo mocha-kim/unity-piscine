@@ -57,3 +57,6 @@ TagManager:
   - name: Character
     uniqueID: 63661205
     locked: 0
+  - name: Bullet
+    uniqueID: 3774616587
+    locked: 0

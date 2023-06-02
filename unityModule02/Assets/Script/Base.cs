@@ -7,10 +7,10 @@ namespace Module02
 {
     public class Base : MonoBehaviour, IDamagable
     {
-        private int _hp = 5;
-        public int HP => _hp;
+        private float _hp = 5.0f;
+        public float HP => _hp;
 
-        public void Damaged(int damage)
+        public void Damaged(float damage)
         {
             _hp -= damage;
             Debug.Log("HP: " + _hp);

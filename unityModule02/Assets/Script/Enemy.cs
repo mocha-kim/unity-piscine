@@ -5,11 +5,12 @@ using UnityEngine;
 
 namespace Module02
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour, IDamagable
     {
+		private float _hp = 1.0f;
         private GameObject _spawner;
         
-        [SerializeField] private int damage = 1;
+        [SerializeField] private float damage = 1.0f;
         [SerializeField] private Vector3 _moveVector = Vector3.down;
 
         private void Update()
