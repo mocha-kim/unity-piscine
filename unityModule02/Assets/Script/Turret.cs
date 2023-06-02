@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Module02
@@ -7,31 +8,58 @@ namespace Module02
 	public class Turret : MonoBehaviour
 	{
 		private float _elapsedTime = 0f;
-		private GameObject _target;
+		private GameObject _closestTarget;
+		private CircleCollider2D _collider;
+		private List<GameObject> _targetsInRange = new ();
 
-		[SerializeField] private float duration = 0.25f;
+		[SerializeField] private float range = 4.0f;
+		[SerializeField] private float duration = 1f;
 		[SerializeField] private float damage = 0.2f;
 		[SerializeField] private GameObject bulletPrefab;
 
+		private void Start()
+		{
+			_collider = GetComponent<CircleCollider2D>();
+			_collider.radius = range;
+		}
+
    	 	private void Update()
    	 	{
-			DetectTarget();
         	_elapsedTime += Time.deltaTime;
         	if (_elapsedTime >= duration)
         	{
-            	if (GameManager.Instance.IsGameOver)
-            	{
-                	gameObject.getComponent<Turret>().SetActive(false);
-                	return;
-            	}
             	_elapsedTime = 0f;
+            	if (GameManager.Instance.IsGameOver) return;
+
+				if (_closestTarget == null) return;
                 Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform).GetComponent<Bullet>();
-                bullet.Fire(gameObject);
+                bullet.Fire(_closestTarget, damage);
         	}
     	}
 
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (other.gameObject.CompareTag("Enemy"))
+			{
+				_targetsInRange.Add(other.gameObject);
+				DetectTarget();
+			}
+		}
+
+		private void OnTriggerExit2D(Collider2D other)
+		{
+			if (other.gameObject.CompareTag("Enemy"))
+			{
+				_targetsInRange.Remove(other.gameObject);
+				DetectTarget();
+			}
+		}
+
 		private void DetectTarget()
 		{
+			_closestTarget = _targetsInRange.OrderBy(obj => {
+            	return Vector3.Distance(transform.position, obj.transform.position);
+        		}).FirstOrDefault();
 		}
 	}
 }

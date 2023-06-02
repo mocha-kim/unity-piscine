@@ -7,10 +7,10 @@ namespace Module02
 {
     public class Enemy : MonoBehaviour, IDamagable
     {
-		private float _hp = 1.0f;
+		[SerializeField] private float _hp = 1.0f;
         private GameObject _spawner;
         
-        [SerializeField] private float damage = 1.0f;
+        [SerializeField] private float damage = 3.0f;
         [SerializeField] private Vector3 _moveVector = Vector3.down;
 
         private void Update()
@@ -35,6 +35,15 @@ namespace Module02
         public void SetSpawner(GameObject spawner)
         {
             _spawner = spawner;
+        }
+
+        public void Damaged(float damage)
+        {
+            _hp -= damage;
+            if (_hp <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
