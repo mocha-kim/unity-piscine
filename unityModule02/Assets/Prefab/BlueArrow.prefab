@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8210794526643823431}
   - component: {fileID: 6125630962031239100}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 8223785380822915996}
   - component: {fileID: 5778556067011164870}
   - component: {fileID: -7214082971716461881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueArrow
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
