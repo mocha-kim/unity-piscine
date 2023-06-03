@@ -8,7 +8,8 @@ namespace Module02
 	public class Turret : MonoBehaviour
 	{
 		private float _elapsedTime = 0f;
-		[SerializeField] private GameObject _closestTarget;
+		private GameObject _closestTarget;
+		private Vector3 _bulletOffset = new Vector3(0f, 0.5f, 0f);
 		private CircleCollider2D _collider;
 		private List<GameObject> _targetsInRange = new ();
 
@@ -41,7 +42,7 @@ namespace Module02
 				DetectTarget();
 				if (_closestTarget == null) return;
 
-                Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform).GetComponent<Bullet>();
+                Bullet bullet = Instantiate(bulletPrefab, transform.position + _bulletOffset, Quaternion.identity, transform).GetComponent<Bullet>();
                 bullet.Fire(_closestTarget, damage);
         	}
     	}

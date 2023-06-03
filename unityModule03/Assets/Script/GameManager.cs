@@ -8,14 +8,15 @@ namespace Module02
         private static GameManager _instance;
         public static GameManager Instance => _instance;
 
-        private float _baseHp;
+        [SerializeField] private float baseHp = 5.0f;
         private float _hp;
         public Action<float> OnHPChanged;
-        
+
+        [SerializeField] private int baseEnergy = 8;
         private int _energy;
         public Action<int> OnEnergyChanged;
 
-        public float PercentHP => _hp / _baseHp;
+        public float PercentHP => _hp / baseHp;
         public float HP
         {
             get => _hp;
@@ -47,25 +48,24 @@ namespace Module02
             {
                 Destroy(gameObject);
             }
+        }
+
+        private void Start()
+        {
             Init();
         }
 
         private void Init()
         {
             IsGameOver = false;
-            Energy = 5;
-            HP = 5;
+            Energy = baseEnergy;
+            HP = baseHp;
         }
 
         public void GameOver()
         {
             Debug.Log("Game Over");
             IsGameOver = true;
-        }
-
-        public void InitBase(float baseHp)
-        {
-            _baseHp = baseHp;
         }
     }
 }

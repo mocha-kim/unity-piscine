@@ -11,7 +11,7 @@ namespace Module02
         private GameObject _spawner;
         
         [SerializeField] private float damage = 3.0f;
-		[SerializeField] private float speed = 2.0f;
+		[SerializeField] private float speed = 1.5f;
         [SerializeField] private Vector3 _moveVector = Vector3.down;
 
 		private void Start()
@@ -49,6 +49,7 @@ namespace Module02
             if (_hp <= 0)
             {
                 Destroy(gameObject);
+                GameManager.Instance.Energy += 1;
             }
         }
     }

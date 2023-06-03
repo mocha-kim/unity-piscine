@@ -96,6 +96,10 @@ namespace Module02.UI
         
         private void OnBeginDrag(GameObject slot)
         {
+            if (GameManager.Instance.Energy < slot.GetComponent<SummonSlotUI>().Cost)
+            {
+                return;
+            }
             MouseData.draggingItem = slot.GetComponent<SummonSlotUI>().CreateTurretImage();
         }
         
