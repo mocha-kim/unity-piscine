@@ -21,7 +21,8 @@ namespace Module04.StateMachine
     
         public abstract void Update();
 
-        public abstract void FixedUpdate();
+        public virtual void FixedUpdate()
+        {}
 
         public virtual void OnExit()
         {}

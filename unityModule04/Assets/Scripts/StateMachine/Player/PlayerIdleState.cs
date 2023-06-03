@@ -24,8 +24,5 @@ namespace Module04.StateMachine
                 return;
             }
         }
-
-        public override void FixedUpdate()
-        {}
     }
 }

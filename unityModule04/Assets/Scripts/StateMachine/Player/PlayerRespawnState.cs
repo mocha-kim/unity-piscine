@@ -9,8 +9,5 @@ namespace Module04.StateMachine
 
         public override void Update()
         {}
-
-        public override void FixedUpdate()
-        {}
     }
 }

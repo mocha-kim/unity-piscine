@@ -20,9 +20,6 @@ namespace Module04.StateMachine
         public override void Update()
         {}
 
-        public override void FixedUpdate()
-        {}
-        
         public override void OnExit()
         {
             _context.animator.SetBool(_isDamagedId, false);
