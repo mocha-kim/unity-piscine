@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-
 namespace Module04.StateMachine
 {
     public abstract class State<T>
@@ -25,6 +20,8 @@ namespace Module04.StateMachine
         {}
     
         public abstract void Update();
+
+        public abstract void FixedUpdate();
 
         public virtual void OnExit()
         {}

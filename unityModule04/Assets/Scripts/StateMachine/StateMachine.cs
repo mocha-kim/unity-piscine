@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,6 +25,8 @@ namespace Module04.StateMachine
         }
 
         public void Update() => _curState.Update();
+
+        public void FixedUpdate() => _curState.FixedUpdate();
     
         public void AddState(State<T> state)
         {
