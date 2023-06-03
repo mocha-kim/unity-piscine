@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Module04.StateMachine
+namespace Module04.StateMachine.Player
 {
-    public class PlayerDamagedState : State<Player>
+    public class PlayerDamagedState : State<Module04.Player>
     {
         private int _isDamagedId;
 

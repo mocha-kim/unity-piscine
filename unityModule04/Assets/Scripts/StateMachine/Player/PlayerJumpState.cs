@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Module04.StateMachine
+namespace Module04.StateMachine.Player
 {
-    public class PlayerJumpState : State<Player>
+    public class PlayerJumpState : State<Module04.Player>
     {
         private int _isJumpingId;
         private readonly float _jumpPower = 20.0f;

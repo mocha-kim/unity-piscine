@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Module04.StateMachine
+namespace Module04.StateMachine.Player
 {
-    public class PlayerMoveState : State<Player>
+    public class PlayerMoveState : State<Module04.Player>
     {
         private int _moveXid;
         private readonly float _speed = 10.0f;

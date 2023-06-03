@@ -1,6 +1,6 @@
-namespace Module04.StateMachine
+namespace Module04.StateMachine.Player
 {
-    public class PlayerIdleState : State<Player>
+    public class PlayerIdleState : State<Module04.Player>
     {
         public override void OnEnter()
         {

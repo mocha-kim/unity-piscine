@@ -1,20 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Module04.StateMachine;
 using UnityEngine;
 
-public class Liana : MonoBehaviour
+namespace Module04
 {
-    private StateMachine<Liana> _stateMachine;
-
-    private void Awake()
+    public class Liana : MonoBehaviour
     {
-        // TODO: _stateMachine init;
+        private StateMachine<Liana> _stateMachine;
+
+        private void Awake()
+        {
+            // TODO: _stateMachine init;
+        }
+
+        void Update()
+        {
+            _stateMachine.Update();
+        }
     }
 
-    void Update()
-    {
-        _stateMachine.Update();
-    }
 }

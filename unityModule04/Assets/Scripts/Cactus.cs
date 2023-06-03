@@ -1,19 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using Module04.StateMachine;
 using UnityEngine;
 
-public class Cactus : MonoBehaviour
+namespace Module04
 {
-    private StateMachine<Cactus> _stateMachine;
-
-    private void Awake()
+    public class Cactus : MonoBehaviour
     {
-        // TODO: _stateMachine init;
-    }
+        private StateMachine<Cactus> _stateMachine;
 
-    void Update()
-    {
-        _stateMachine.Update();
+        private void Awake()
+        {
+            // TODO: _stateMachine init;
+        }
+
+        void Update()
+        {
+            _stateMachine.Update();
+        }
     }
 }
