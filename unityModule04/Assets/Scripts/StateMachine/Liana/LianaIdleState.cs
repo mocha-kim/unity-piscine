@@ -1,6 +1,6 @@
 namespace Module04.StateMachine.Liana
 {
-    public class LianaIdleState : State<Module04.Liana>
+    public class LianaIdleState : State<Enemy>
     {
         public override void Update()
         {

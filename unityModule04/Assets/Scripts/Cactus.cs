@@ -1,20 +1,15 @@
 using Module04.StateMachine;
+using Module04.StateMachine.Cactus;
 using UnityEngine;
 
 namespace Module04
 {
-    public class Cactus : MonoBehaviour
+    public class Cactus : Enemy
     {
-        private StateMachine<Cactus> _stateMachine;
-
-        private void Awake()
+        protected override void Awake()
         {
-            // TODO: _stateMachine init;
-        }
-
-        void Update()
-        {
-            _stateMachine.Update();
+            base.Awake();
+            _stateMachine = new StateMachine<Enemy>(this, new CactusIdleState());
         }
     }
 }

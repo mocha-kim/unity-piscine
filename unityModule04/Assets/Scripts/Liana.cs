@@ -1,21 +1,15 @@
 using Module04.StateMachine;
+using Module04.StateMachine.Liana;
 using UnityEngine;
 
 namespace Module04
 {
-    public class Liana : MonoBehaviour
+    public class Liana : Enemy
     {
-        private StateMachine<Liana> _stateMachine;
-
-        private void Awake()
+        protected override void Awake()
         {
-            // TODO: _stateMachine init;
-        }
-
-        void Update()
-        {
-            _stateMachine.Update();
+            base.Awake();
+            _stateMachine = new StateMachine<Enemy>(this, new LianaIdleState());
         }
     }
-
 }
