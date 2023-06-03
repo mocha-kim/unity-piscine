@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 
@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Decorations
+    uniqueID: 3761627049
+    locked: 0
   - name: Character
     uniqueID: 1868100989
+    locked: 0
+  - name: Platforms
+    uniqueID: 1668727003
     locked: 0
