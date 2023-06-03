@@ -7,8 +7,19 @@
     <list default="true" id="0d1d6d87-60aa-4d57-bf0a-b4d36a6d1b64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Score.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Score.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/map01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/map01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Boundary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Boundary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/LevelInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/LevelInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Turret.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/UI/BarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/BarUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/UI/ScoreSceneUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/ScoreSceneUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685718264864</updated>
       <workItem from="1685718266894" duration="7000" />
-      <workItem from="1685718573692" duration="20432000" />
+      <workItem from="1685718573692" duration="23979000" />
     </task>
     <servers />
   </component>

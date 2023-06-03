@@ -32,6 +32,7 @@ namespace Module02
             if (GameManager.Instance.IsGameOver)
 			{
 				Destroy(gameObject);
+				return;
 			}
 
         	_elapsedTime += Time.deltaTime;
@@ -40,7 +41,10 @@ namespace Module02
             	_elapsedTime = 0f;
 				
 				DetectTarget();
-				if (_closestTarget == null) return;
+				if (_closestTarget == null)
+				{
+					return;
+				}
 
                 Bullet bullet = Instantiate(bulletPrefab, transform.position + _bulletOffset, Quaternion.identity, transform).GetComponent<Bullet>();
                 bullet.Fire(_closestTarget, damage);

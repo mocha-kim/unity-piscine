@@ -7,8 +7,9 @@ namespace Module02
 {
     public class Enemy : MonoBehaviour, IDamagable
     {
-		[SerializeField] private float _hp = 3.0f;
-        private GameObject _spawner;
+        private int _index; 
+        private float _hp = 3.0f;
+        private Spawner _spawner;
         
         [SerializeField] private float damage = 1.0f;
 		[SerializeField] private float speed = 2f;
@@ -38,9 +39,10 @@ namespace Module02
             }
         }
 
-        public void SetSpawner(GameObject spawner)
+        public void SetSpawner(Spawner spawner, int index)
         {
             _spawner = spawner;
+            _index = index;
         }
 
         public void Damaged(float damage)
@@ -51,6 +53,10 @@ namespace Module02
                 Destroy(gameObject);
                 GameManager.Instance.Energy++;
                 GameManager.Instance.KillCount++;
+                if (_spawner.IsLastEnemy(_index))
+                {
+                    GameManager.Instance.GameClear();
+                }
             }
         }
     }

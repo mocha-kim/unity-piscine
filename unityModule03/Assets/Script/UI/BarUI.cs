@@ -49,6 +49,8 @@ namespace Module02.UI
         {
             GameManager.Instance.OnHPChanged += OnHPChanged;
             GameManager.Instance.OnEnergyChanged += OnEnergyChanged;
+            OnHPChanged(GameManager.Instance.HP);
+            OnEnergyChanged(GameManager.Instance.Energy);
         }
 
         private void OnDestroy()

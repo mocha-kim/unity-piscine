@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Module02
 {
@@ -36,38 +37,49 @@ namespace Module02
             }
         }
         public bool IsGameOver { get; private set; }
+        public bool IsMapClear { get; private set; } 
         public int KillCount { get; set; }
+        public int MapIndex { get; private set; }
 
         private void Awake()
         {
             if (_instance == null)
             {
                 _instance = this;
+                MapIndex = 1;
                 DontDestroyOnLoad(gameObject);
             }
             else
             {
                 Destroy(gameObject);
             }
-        }
-
-        private void Start()
-        {
             Init();
         }
 
-        private void Init()
+        public void Init()
         {
             IsGameOver = false;
             Energy = baseEnergy;
             HP = baseHp;
+
+            IsMapClear = false;
             KillCount = 0;
         }
 
         public void GameOver()
         {
             Debug.Log("Game Over");
+            IsMapClear = false;
             IsGameOver = true;
+            SceneManager.LoadScene("Score");
+        }
+
+        public void GameClear()
+        {
+            Debug.Log(SceneManager.GetActiveScene().name + " Clear!");
+            IsMapClear = true;
+            MapIndex = (MapIndex == 3) ? 0 : MapIndex + 1;
+            SceneManager.LoadScene("Score");
         }
 
         public void PauseGame()

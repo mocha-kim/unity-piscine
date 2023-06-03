@@ -22,8 +22,9 @@ public static class LevelInfo
 
     public static void GetInfo(int level, out int enemyIndex, out int totalCount, out float spawnDuration)
     {
-        enemyIndex = _information[level].enemyIndex;
-        totalCount = _information[level].totalCount;
-        spawnDuration = _information[level].spawnDuration;
+        Debug.Log("Get Level " + level + " Info");
+        enemyIndex = _information[level - 1].enemyIndex;
+        totalCount = _information[level - 1].totalCount;
+        spawnDuration = _information[level - 1].spawnDuration;
     }
 }

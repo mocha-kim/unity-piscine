@@ -6,7 +6,7 @@ namespace Module02
 {
 	public class Bullet : MonoBehaviour
 	{
-	    private float _speed = 5.0f;
+	    private float _speed = 20.0f;
 		private float _damage = 1.0f;
 		private float _angle;
 	    private Vector3 _direction;
@@ -22,7 +22,6 @@ namespace Module02
 			_damage += basicDamage;
 	        _direction = target.transform.position - transform.position;
 	        _direction.Normalize();
-	        _direction *= 100.0f;
 			_angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
             _rigidbody.AddForce(_direction * _speed, ForceMode2D.Impulse);

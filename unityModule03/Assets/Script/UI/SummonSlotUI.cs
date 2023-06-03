@@ -28,6 +28,7 @@ namespace Module02.UI
         private void Start()
         {
             GameManager.Instance.OnEnergyChanged += OnEnergyChanged;
+            OnEnergyChanged(GameManager.Instance.Energy);
         }
 
         private void OnDestroy()
