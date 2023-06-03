@@ -1,23 +1,38 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Module02.UI
 {
     public class BarUI : MonoBehaviour
     {
-        [SerializeField] private GameObject turretsParent;
-        [SerializeField] private GameObject grid;
         private List<SummonSlotUI> _summonSlots = new();
         private List<SquareUI> _squares = new ();
 
+        private TextMeshProUGUI _hpValueText;
+        private Slider _hpSlider;
+        private TextMeshProUGUI _energyValueText;
+        
+        [SerializeField] private GameObject turretsParent;
+        [SerializeField] private GameObject grid;
+        [SerializeField] private GameObject hpSection;
+        [SerializeField] private GameObject energySection;
+
         private void Awake()
         {
-            for (int i = 0; i < transform.childCount; i++)
+            _hpValueText = hpSection.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            _hpSlider = hpSection.transform.GetChild(2).GetComponent<Slider>();
+            _energyValueText = energySection.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+
+            var summonSlots = transform.GetChild(0);
+            for (int i = 0; i < summonSlots.childCount; i++)
             {
-                var slot = transform.GetChild(i).gameObject;
+                var slot = summonSlots.GetChild(i).gameObject;
                 _summonSlots.Add(slot.GetComponent<SummonSlotUI>());
                 slot.GetComponent<SummonSlotUI>().SetCanvas(transform.parent.gameObject);
                 RegisterSlotEvents(slot);
@@ -28,6 +43,18 @@ namespace Module02.UI
                 _squares.Add(square.GetComponent<SquareUI>());
                 RegisterSquareEvents(square);
             }
+        }
+
+        private void Start()
+        {
+            GameManager.Instance.OnHPChanged += OnHPChanged;
+            GameManager.Instance.OnEnergyChanged += OnEnergyChanged;
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnHPChanged -= OnHPChanged;
+            GameManager.Instance.OnEnergyChanged -= OnEnergyChanged;
         }
 
         private void RegisterSlotEvents(GameObject slot)
@@ -104,6 +131,17 @@ namespace Module02.UI
                 turret.transform.position = square.GetPositionInWorld();
                 turret.transform.SetParent(turretsParent.transform);
             }
+        }
+
+        private void OnHPChanged(float hp)
+        {
+            _hpValueText.text = hp.ToString("F0");
+            _hpSlider.value = GameManager.Instance.PercentHP;
+        }
+
+        private void OnEnergyChanged(int energy)
+        {
+            _energyValueText.text = energy.ToString();
         }
     }
 }
