@@ -6,12 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1d6d87-60aa-4d57-bf0a-b4d36a6d1b64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/ScoreSceneUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Qee1oJDNlFZ3Z57GCo9TMMy1of" />
   <component name="ProjectViewState">
@@ -84,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685718264864</updated>
       <workItem from="1685718266894" duration="7000" />
-      <workItem from="1685718573692" duration="18462000" />
+      <workItem from="1685718573692" duration="20432000" />
     </task>
     <servers />
   </component>

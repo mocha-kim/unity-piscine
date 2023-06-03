@@ -36,6 +36,7 @@ namespace Module02
             }
         }
         public bool IsGameOver { get; private set; }
+        public int KillCount { get; set; }
 
         private void Awake()
         {
@@ -60,6 +61,7 @@ namespace Module02
             IsGameOver = false;
             Energy = baseEnergy;
             HP = baseHp;
+            KillCount = 0;
         }
 
         public void GameOver()
