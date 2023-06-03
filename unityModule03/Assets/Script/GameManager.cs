@@ -67,5 +67,15 @@ namespace Module02
             Debug.Log("Game Over");
             IsGameOver = true;
         }
+
+        public void PauseGame()
+        {
+            Time.timeScale = 0f;
+        }
+
+        public void ResumeGame()
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 }
