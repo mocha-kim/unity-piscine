@@ -5,7 +5,7 @@ namespace Module04.StateMachine
     public class PlayerMoveState : State<Player>
     {
         private int _moveXid;
-        private float _speed = 10.0f;
+        private readonly float _speed = 10.0f;
         
         public override void OnInit()
         {
