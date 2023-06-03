@@ -25,6 +25,9 @@ namespace Module04
             _stateMachine = new StateMachine<Player>(this, new PlayerIdleState());
             _stateMachine.AddState(new PlayerMoveState());
             _stateMachine.AddState(new PlayerJumpState());
+            _stateMachine.AddState(new PlayerDamagedState());
+            _stateMachine.AddState(new PlayerDeadState());
+            _stateMachine.AddState(new PlayerRespawnState());
         }
 
         // Update is called once per frame
