@@ -8,12 +8,10 @@ namespace Module02.UI
 {
     public class BarUI : MonoBehaviour
     {
+        [SerializeField] private GameObject turretsParent;
         [SerializeField] private GameObject grid;
         private List<SummonSlotUI> _summonSlots = new();
         private List<SquareUI> _squares = new ();
-
-        private Vector3 _canvasOffset;
-        private Vector3 _mouseOffset;
 
         private void Awake()
         {
@@ -71,9 +69,6 @@ namespace Module02.UI
         
         private void OnBeginDrag(GameObject slot)
         {
-            _canvasOffset = gameObject.GetComponent<RectTransform>().position;
-            _mouseOffset = Input.mousePosition;
-
             MouseData.draggingItem = slot.GetComponent<SummonSlotUI>().CreateTurretImage();
         }
         
@@ -84,7 +79,7 @@ namespace Module02.UI
                 return;
             }
 
-            Vector3 imgPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var imgPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             imgPosition.z = 80.0f;
             MouseData.draggingItem.GetComponent<RectTransform>().position = imgPosition;
         }
@@ -96,8 +91,18 @@ namespace Module02.UI
             if (MouseData.mouseHoveredSquare != null)
             {
                 var turret = slot.GetComponent<SummonSlotUI>().CreateTurret();
-                turret.transform.position = MouseData.mouseHoveredSquare.GetComponent<SquareUI>().GetPositionInWorld();
-                turret.transform.SetParent(MouseData.mouseHoveredSquare.transform);
+                var square = MouseData.mouseHoveredSquare.GetComponent<SquareUI>();
+                if (!square.OccupySquare(turret.GetComponent<Turret>().Cost))
+                {
+                    Destroy(turret);
+                    return;
+                }
+                if (square.IsRightSide)
+                {
+                    turret.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                turret.transform.position = square.GetPositionInWorld();
+                turret.transform.SetParent(turretsParent.transform);
             }
         }
     }

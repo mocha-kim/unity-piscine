@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +11,12 @@ namespace Module02.UI
         private GameObject _canvas;
         
         [SerializeField] private GameObject turretPrefab;
+
+        private void Awake()
+        {
+            var tmp = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            tmp.text = turretPrefab.GetComponent<Turret>().InfoToString();
+        }
 
         public void SetCanvas(GameObject canvas)
         {

@@ -12,10 +12,13 @@ namespace Module02
 		private CircleCollider2D _collider;
 		private List<GameObject> _targetsInRange = new ();
 
+		[SerializeField] private int cost = 5;
 		[SerializeField] private float range = 4.0f;
 		[SerializeField] private float duration = 1f;
 		[SerializeField] private float damage = 0.2f;
 		[SerializeField] private GameObject bulletPrefab;
+
+		public int Cost => cost;
 
 		private void Start()
 		{
@@ -64,6 +67,15 @@ namespace Module02
 			_closestTarget = _targetsInRange.OrderBy(target => {
             	return Vector3.Distance(transform.position, target.transform.position);
         		}).FirstOrDefault();
+		}
+
+		public string InfoToString()
+		{
+			string info = "";
+			info += "D:" + (damage + 1.0f).ToString("F1") + "\n";
+			info += "C:" + duration.ToString("F1") + "\n";
+			info += "Cost:" + cost;
+			return info;
 		}
 	}
 }

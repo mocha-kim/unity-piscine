@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1d6d87-60aa-4d57-bf0a-b4d36a6d1b64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unityModule03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Fonts/neodgm SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Base.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Base.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Characters.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Characters.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Dust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Dust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/UI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bolt 2D LittleWars VE3/Sprites/UI.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FastTurret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/FastTurret.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SlowTurret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SlowTurret.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Turret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Turret.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/map01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/map01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Turret.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/UI/BarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/BarUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/UI/SquareUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/SquareUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/UI/SummonSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/SummonSlotUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685718264864</updated>
       <workItem from="1685718266894" duration="7000" />
-      <workItem from="1685718573692" duration="8002000" />
+      <workItem from="1685718573692" duration="12455000" />
     </task>
     <servers />
   </component>
