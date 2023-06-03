@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Module04
@@ -6,13 +7,21 @@ namespace Module04
     {
         private bool _isJumping = false;
         private float _moveX;
+
+        private SpriteRenderer _spriteRenderer;
     
         public bool IsJumping => _isJumping;
         public float MoveX => _moveX;
 
+        private void Awake()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
         private void Update()
         {
-            _moveX = Input.GetAxis("Horizontal");
+            _moveX = Input.GetAxis("Horizontal"); 
+            _spriteRenderer.flipX = _moveX < 0f;
         
             if (Input.GetButtonDown("Jump"))
             {
