@@ -6,6 +6,8 @@ namespace Module04
 {
     public class Player : MonoBehaviour
     {
+        private int _hp = 3;
+        
         public Animator animator;
         
         private PlayerController _controller;
@@ -39,6 +41,12 @@ namespace Module04
         private void FixedUpdate()
         {
             _stateMachine.FixedUpdate();
+        }
+
+        public void OnDamaged(int damage)
+        {
+            _stateMachine.ChangeState<PlayerDamagedState>();
+            _hp -= damage;
         }
     }
 }
