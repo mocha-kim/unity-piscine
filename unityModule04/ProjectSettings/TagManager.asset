@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Canvas
+  - BlackScreen
   layers:
   - Default
   - TransparentFX
@@ -51,6 +52,9 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 1668727003
+    locked: 0
+  - name: Player
+    uniqueID: 3055016049
     locked: 0
   - name: UI
     uniqueID: 2515188639
