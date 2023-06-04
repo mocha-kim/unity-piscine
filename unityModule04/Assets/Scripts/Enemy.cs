@@ -8,6 +8,10 @@ namespace Module04
     {
         protected StateMachine<Enemy> _stateMachine;
         protected GameObject _target;
+
+        protected AudioSource _audio;
+        [SerializeField] protected AudioClip[] _clips;
+        
         [NonSerialized] public Animator animator;
 
         protected int _damage = 1;
@@ -21,6 +25,7 @@ namespace Module04
         protected virtual void Awake()
         {
             _target = GameObject.FindWithTag("Player");
+            _audio = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
         }
         
@@ -29,6 +34,11 @@ namespace Module04
             if (GameManager.Instance.IsGameOver)
                 return;
             _stateMachine.Update();
+        }
+
+        public void PlayEffectSound(int index)
+        {
+            _audio.PlayOneShot(_clips[index]);
         }
     }
 }

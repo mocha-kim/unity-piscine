@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Module04.StateMachine;
 using Module04.StateMachine.Cactus;
 using Unity.Mathematics;
@@ -25,6 +24,7 @@ namespace Module04
 
         public void OnAttackEvent()
         {
+            PlayEffectSound(0);
             var jelly = Instantiate(jellyPrefab, _launchPosition, quaternion.identity, transform);
             jelly.GetComponent<Jelly>().Throw(_isLookAtRightSide);
         }

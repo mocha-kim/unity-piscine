@@ -17,6 +17,7 @@ namespace Module04.StateMachine.Liana
         {
             _elapsedTime = 0f;
             _context.animator.SetTrigger(_attackTriggerId);
+            _context.PlayEffectSound(0);
         }
 
         public override void Update()
@@ -32,6 +33,7 @@ namespace Module04.StateMachine.Liana
             {
                 _elapsedTime = 0f;
                 _context.animator.SetTrigger(_attackTriggerId);
+                _context.PlayEffectSound(0);
             }
         }
     }
