@@ -15,6 +15,7 @@ namespace Module04.StateMachine.Liana
 
         public override void OnEnter()
         {
+            _elapsedTime = 0f;
             _context.animator.SetTrigger(_attackTriggerId);
         }
 

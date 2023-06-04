@@ -1,3 +1,4 @@
+using System;
 using Module04.StateMachine;
 using Module04.StateMachine.Player;
 using UnityEngine;
@@ -6,7 +7,7 @@ namespace Module04
 {
     public class Player : MonoBehaviour
     {
-        private int _hp = 3;
+        private int _hp;
         
         public Animator animator;
         
@@ -38,17 +39,31 @@ namespace Module04
             _stateMachine.Update();
         }
 
+        private void Start()
+        {
+            Init();
+        }
+
         private void FixedUpdate()
         {
             _stateMachine.FixedUpdate();
         }
 
+        public void Init()
+        {
+            transform.position = GameManager.Instance.PlayerInitPosition;
+            _hp = GameManager.Instance.PlayerInitHP;
+        }
+        
         public void OnDamaged(int damage)
         {
             _rigidbody.velocity = Vector2.zero;
             _stateMachine.ChangeState<PlayerDamagedState>();
             _hp -= damage;
-            Debug.Log(_hp);
+            if (_hp <= 0)
+            {
+                _stateMachine.ChangeState<PlayerDeadState>();
+            }
         }
     }
 }

@@ -20,6 +20,8 @@ public class Jelly : MonoBehaviour
 
     public void Update()
     {
+        if (GameManager.Instance.IsGameOver)
+            return;
         _epasedTIme += Time.deltaTime;
         if (_epasedTIme >= _destroyTime)
         {

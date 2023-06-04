@@ -20,6 +20,8 @@ namespace Module04
 
         private void Update()
         {
+            if (GameManager.Instance.IsGameOver)
+                return;
             _moveX = Input.GetAxis("Horizontal");
             if (_moveX != 0f)
             {

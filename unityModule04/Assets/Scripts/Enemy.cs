@@ -26,6 +26,8 @@ namespace Module04
         
         protected virtual void Update()
         {
+            if (GameManager.Instance.IsGameOver)
+                return;
             _stateMachine.Update();
         }
     }
