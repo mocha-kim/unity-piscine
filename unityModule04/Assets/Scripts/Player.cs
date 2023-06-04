@@ -47,6 +47,7 @@ namespace Module04
         {
             _stateMachine.ChangeState<PlayerDamagedState>();
             _hp -= damage;
+            Debug.Log(_hp);
         }
     }
 }

@@ -4,25 +4,21 @@ namespace Module04.StateMachine.Player
 {
     public class PlayerDamagedState : State<Module04.Player>
     {
-        private int _isDamagedId;
+        private int _damagedTriggerId;
 
         public override void OnInit()
         {
-            _isDamagedId = Animator.StringToHash("isDamaged");
+            _damagedTriggerId = Animator.StringToHash("damagedTrigger");
         }
 
         public override void OnEnter()
         {
-            _context.animator.SetBool(_isDamagedId, true);
+            _context.animator.SetTrigger(_damagedTriggerId);
             _stateMachine.ChangeState<PlayerIdleState>();
         }
 
         public override void Update()
         {}
 
-        public override void OnExit()
-        {
-            _context.animator.SetBool(_isDamagedId, false);
-        }
     }
 }
