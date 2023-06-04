@@ -7,6 +7,7 @@ namespace Module04.StateMachine.Player
     {
         private int _isDeadId;
 
+        private bool _isRevived;
         private float _elapsedTime = 0f;
         private readonly float _fadeTime = 1f;
         private readonly float _delayTime = 1f;
@@ -23,6 +24,7 @@ namespace Module04.StateMachine.Player
         public override void OnEnter()
         {
             _context.Init();
+            _isRevived = false;
             
             _elapsedTime = 0f;
             _color = Color.black;
@@ -35,7 +37,13 @@ namespace Module04.StateMachine.Player
             _elapsedTime += Time.deltaTime;
             if (_elapsedTime < _delayTime) return;
 
-            _context.animator.SetBool(_isDeadId, false);
+            if (!_isRevived)
+            {
+                _isRevived = true;
+                _context.animator.SetBool(_isDeadId, false);
+                _context.PlayOneShot(EffectClip.Respawn);
+            }
+            
             _color.a -= _fadeTime * Time.deltaTime;
             _blackPanel.color = _color;
             if (_color.a <= 0f)

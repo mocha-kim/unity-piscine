@@ -17,6 +17,7 @@ namespace Module04
         private Rigidbody2D _rigidbody;
 
         private AudioSource _audio;
+        private AudioSource _stepAudio;
         [SerializeField] private AudioClip[] _clips;
 
         public bool IsJumping => _controller.IsJumping;
@@ -29,7 +30,8 @@ namespace Module04
             _controller = GetComponent<PlayerController>();
             _rigidbody = GetComponent<Rigidbody2D>();
 
-            _audio = GetComponent<AudioSource>();
+            _audio = GetComponents<AudioSource>()[0];
+            _stepAudio = GetComponents<AudioSource>()[1];
 
             _stateMachine = new StateMachine<Player>(this, new PlayerIdleState());
             _stateMachine.AddState(new PlayerMoveState());
@@ -72,5 +74,9 @@ namespace Module04
                 _stateMachine.ChangeState<PlayerDeadState>();
             }
         }
+
+        public void PlayOneShot(EffectClip type) => _audio.PlayOneShot(_clips[(int)type]);
+        public void PlayStepSound() => _stepAudio.Play();
+        public void StopStepSound() => _stepAudio.Pause();
     }
 }

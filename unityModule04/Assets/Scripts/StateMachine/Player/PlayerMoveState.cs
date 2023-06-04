@@ -17,7 +17,9 @@ namespace Module04.StateMachine.Player
             if (_context.MoveX == 0f)
             {
                 _stateMachine.ChangeState<PlayerIdleState>();
+                return;
             }
+            _context.PlayStepSound();
         }
         
         public override void Update()
@@ -39,6 +41,11 @@ namespace Module04.StateMachine.Player
         public override void FixedUpdate()
         {
             _context.Rigidbody.velocity = new Vector2(_context.MoveX * _speed, _context.Rigidbody.velocity.y);
+        }
+
+        public override void OnExit()
+        {
+            _context.StopStepSound();
         }
     }
 }

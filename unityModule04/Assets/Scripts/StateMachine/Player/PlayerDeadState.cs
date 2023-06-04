@@ -22,6 +22,7 @@ namespace Module04.StateMachine.Player
 
         public override void OnEnter()
         {
+            _context.PlayOneShot(EffectClip.Dead);
             _context.animator.SetBool(_isDeadId, true);
             GameManager.Instance.IsGameOver = true;
 

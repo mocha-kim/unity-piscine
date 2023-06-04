@@ -13,6 +13,7 @@ namespace Module04.StateMachine.Player
 
         public override void OnEnter()
         {
+            _context.PlayOneShot(EffectClip.Damaged);
             _context.animator.SetTrigger(_damagedTriggerId);
             _stateMachine.ChangeState<PlayerIdleState>();
         }

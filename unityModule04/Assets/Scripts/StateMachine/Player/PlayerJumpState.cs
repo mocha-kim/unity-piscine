@@ -15,6 +15,7 @@ namespace Module04.StateMachine.Player
 
         public override void OnEnter()
         {
+            _context.PlayOneShot(EffectClip.Jump);
             _context.Rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
             _context.animator.SetBool(_isJumpingId, true);
         }
@@ -34,6 +35,7 @@ namespace Module04.StateMachine.Player
 
         public override void OnExit()
         {
+            _context.PlayOneShot(EffectClip.Landing);
             _context.animator.SetBool(_isJumpingId, false);
         }
     }
