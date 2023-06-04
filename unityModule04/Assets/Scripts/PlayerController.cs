@@ -35,6 +35,13 @@ namespace Module04
             }
         }
 
+        public void Init()
+        {
+            _spriteRenderer.flipX = false;
+            _isJumping = false;
+            _moveX = 0f;
+        }
+
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.CompareTag("Ground"))

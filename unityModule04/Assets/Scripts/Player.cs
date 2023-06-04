@@ -61,7 +61,8 @@ namespace Module04
         {
             transform.position = GameManager.Instance.PlayerInitPosition;
             _hp = GameManager.Instance.PlayerInitHP;
-            GetComponent<SpriteRenderer>().flipX = false;
+            animator.SetFloat("moveX", 0f);
+            _controller.Init();
         }
         
         public void OnDamaged(int damage)
