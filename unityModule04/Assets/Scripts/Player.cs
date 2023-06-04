@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Module04.StateMachine;
 using Module04.StateMachine.Player;
 using UnityEngine;
@@ -9,11 +10,14 @@ namespace Module04
     {
         private int _hp;
         
-        public Animator animator;
+        [NonSerialized] public Animator animator;
         
         private PlayerController _controller;
         private StateMachine<Player> _stateMachine;
         private Rigidbody2D _rigidbody;
+
+        private AudioSource _audio;
+        [SerializeField] private AudioClip[] _clips;
 
         public bool IsJumping => _controller.IsJumping;
         public float MoveX => _controller.MoveX;
@@ -24,6 +28,8 @@ namespace Module04
             animator = GetComponent<Animator>();
             _controller = GetComponent<PlayerController>();
             _rigidbody = GetComponent<Rigidbody2D>();
+
+            _audio = GetComponent<AudioSource>();
 
             _stateMachine = new StateMachine<Player>(this, new PlayerIdleState());
             _stateMachine.AddState(new PlayerMoveState());
