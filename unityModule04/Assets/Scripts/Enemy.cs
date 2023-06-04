@@ -1,3 +1,4 @@
+using System;
 using Module04.StateMachine;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Module04
     {
         protected StateMachine<Enemy> _stateMachine;
         protected GameObject _target;
-        public Animator animator;
+        [NonSerialized] public Animator animator;
 
         protected int _damage = 1;
         [SerializeField] protected float _attackRange;

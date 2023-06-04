@@ -45,6 +45,7 @@ namespace Module04
 
         public void OnDamaged(int damage)
         {
+            _rigidbody.velocity = Vector2.zero;
             _stateMachine.ChangeState<PlayerDamagedState>();
             _hp -= damage;
             Debug.Log(_hp);
