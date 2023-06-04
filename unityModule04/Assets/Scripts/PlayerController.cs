@@ -20,8 +20,11 @@ namespace Module04
 
         private void Update()
         {
-            _moveX = Input.GetAxis("Horizontal"); 
-            _spriteRenderer.flipX = _moveX < 0f;
+            _moveX = Input.GetAxis("Horizontal");
+            if (_moveX != 0f)
+            {
+                _spriteRenderer.flipX = _moveX < 0f;
+            }
         
             if (Input.GetButtonDown("Jump"))
             {
