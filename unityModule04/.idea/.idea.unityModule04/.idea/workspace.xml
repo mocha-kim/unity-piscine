@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d76d70e1-6ffc-408d-a836-d845e2d630d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.unityModule04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unityModule04/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Jelly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Jelly.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Jelly.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2QhQNzNZujiN6otLvjECEk7uoSp" />
   <component name="ProjectLevelVcsManager">
@@ -27,6 +27,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -38,8 +39,8 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/Users/sunhkim/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
-      "/Users/sunhkim/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
+      "/Users/sunhkim/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/Users/sunhkim/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
       "/Users/sunhkim/.local/share/Symbols/src"
     ]
   }
@@ -91,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685803301535</updated>
       <workItem from="1685803303798" duration="24658000" />
+      <workItem from="1685943008207" duration="303000" />
     </task>
     <servers />
   </component>
@@ -98,7 +100,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
