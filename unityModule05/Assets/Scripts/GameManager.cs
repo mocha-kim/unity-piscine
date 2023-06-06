@@ -17,6 +17,7 @@ namespace Module04
 		private int _stageIndex = 0;
 		private int _unlockIndex = 0;
 		private int _leavesCount = 0;
+		private int _currentPoints = 0;
 		private int _totalPoints = 0;
 		[SerializeField] private StageInfo _stageInfo;
 
@@ -37,7 +38,8 @@ namespace Module04
 				OnHPChanged?.Invoke(_hp);
 			}
 		}
-        public int TotalPoints => _totalPoints;
+
+        public int CurrentPoint => _currentPoints;
 
         private void Awake()
         {
@@ -61,8 +63,9 @@ namespace Module04
 			_stageInfo.CollectLeaf(_stageIndex, index);
 			_leavesCount++;
 			_totalPoints += 5;
+			_currentPoints += 5;
 			PlayerPrefs.SetInt("Points", _totalPoints);
-			OnLeafCollected?.Invoke(_totalPoints);
+			OnLeafCollected?.Invoke(_currentPoints);
 		}
 
 		public void Respawn()
@@ -89,8 +92,9 @@ namespace Module04
 		public void LoadStage(int index)
 		{
 			PlayerPrefs.SetInt("Played", index);
-			_leavesCount = _stageInfo.GetCollectedCount(index); 
-			Debug.Log("Stage1: " + (index + 1) + ", " + _leavesCount);
+			_leavesCount = _stageInfo.GetCollectedCount(index);
+			_currentPoints = 0;
+			PlayerHP = _initHP;
 			SceneManager.LoadScene("Stage" + (index + 1));
 		}
 

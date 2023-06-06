@@ -23,17 +23,17 @@ namespace Module04
         private void Start()
         {
             GameManager.Instance.OnHPChanged += UpdateHPText;
-            GameManager.Instance.OnLeafCollected += UpdateCountText;
+            GameManager.Instance.OnLeafCollected += UpdatePointText;
             GameManager.Instance.OnPointNotEnough += DisplayWarningText;
             
             UpdateHPText(GameManager.Instance.PlayerHP);
-            UpdateCountText(GameManager.Instance.TotalPoints);
+            UpdatePointText(GameManager.Instance.CurrentPoint);
         }
 
         private void OnDestroy()
         {
             GameManager.Instance.OnHPChanged -= UpdateHPText;
-            GameManager.Instance.OnLeafCollected -= UpdateCountText;
+            GameManager.Instance.OnLeafCollected -= UpdatePointText;
             GameManager.Instance.OnPointNotEnough -= DisplayWarningText;
         }
 
@@ -61,7 +61,7 @@ namespace Module04
             _hpText.text = value.ToString();
         }
 
-        private void UpdateCountText(int value)
+        private void UpdatePointText(int value)
         {
             _pointText.text = value.ToString();
         }

@@ -40,6 +40,7 @@ namespace Module04.StateMachine.Player
             if (!_isRevived)
             {
                 _isRevived = true;
+                GameManager.Instance.Respawn();
                 _context.animator.SetBool(_isDeadId, false);
                 _context.PlayOneShot(EffectClip.Respawn);
             }
