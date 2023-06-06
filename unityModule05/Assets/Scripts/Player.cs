@@ -60,7 +60,7 @@ namespace Module04
         public void Init()
         {
             transform.position = GameManager.Instance.PlayerInitPosition;
-            _hp = GameManager.Instance.PlayerInitHP;
+            _hp = GameManager.Instance.PlayerHP;
             animator.SetFloat("moveX", 0f);
             _controller.Init();
         }
