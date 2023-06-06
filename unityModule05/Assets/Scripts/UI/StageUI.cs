@@ -25,9 +25,12 @@ namespace Module04
             GameManager.Instance.OnHPChanged += UpdateHPText;
             GameManager.Instance.OnLeafCollected += UpdateCountText;
             GameManager.Instance.OnPointNotEnough += DisplayWarningText;
+            
+            UpdateHPText(GameManager.Instance.PlayerHP);
+            UpdateCountText(GameManager.Instance.TotalPoints);
         }
 
-        private void OnDestory()
+        private void OnDestroy()
         {
             GameManager.Instance.OnHPChanged -= UpdateHPText;
             GameManager.Instance.OnLeafCollected -= UpdateCountText;
@@ -37,10 +40,10 @@ namespace Module04
         private void DisplayWarningText()
         {
             _warningText.gameObject.SetActive(true);
-            StartCoroutine(TextDisapear());
+            StartCoroutine(TextDisappear());
         }
 
-        IEnumerator TextDisapear()
+        IEnumerator TextDisappear()
         {
             _textColor = Color.black;
             while (_textColor.a >= 0f)

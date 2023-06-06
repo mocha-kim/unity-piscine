@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Module04
@@ -26,5 +27,6 @@ namespace Module04
 
         public bool IsCollectedLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex];
         public void CollectLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex] = true;
+        public int GetCollectedCount(int stageIndex) => _isCollectedleaves[stageIndex].Count(pair => pair.Value);
     }
 }

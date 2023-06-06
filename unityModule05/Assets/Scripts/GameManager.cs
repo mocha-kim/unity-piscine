@@ -18,6 +18,7 @@ namespace Module04
 		private int _leavesCount = 0;
 		[SerializeField] private StageInfo _stageInfo;
 
+		private int _unlockIndex = 0;
 		private int _totalPoints = 0;
 
 		public Action<int> OnHPChanged;
@@ -35,6 +36,7 @@ namespace Module04
 				OnHPChanged?.Invoke(_hp);
 			}
 		}
+        public int TotalPoints => _totalPoints;
 
         private void Awake()
         {
@@ -72,8 +74,9 @@ namespace Module04
 		{
 			if (_leavesCount >= 5)
 			{
-				_stageIndex++;
-				LoadStage(_stageIndex % _stageInfo.StageCount);
+				_stageIndex = (_stageIndex + 1) % _stageInfo.StageCount;
+				_unlockIndex = _stageIndex;
+				LoadStage(_stageIndex);
 				return true;
 			}
 			OnPointNotEnough?.Invoke();
@@ -82,6 +85,8 @@ namespace Module04
 
 		public void LoadStage(int index)
 		{
+			_leavesCount = _stageInfo.GetCollectedCount(index); 
+			Debug.Log("Stage1: " + (index + 1) + ", " + _leavesCount);
 			SceneManager.LoadScene("Stage" + (index + 1));
 		}    
 	}
