@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: data
   m_EditorClassIdentifier: 
   _isCollectedleaves:
-  - leafCount: 0
-    isCollected: 01000000000101
-  - leafCount: 0
+  - leafCount: 7
+    isCollected: 01010000000001
+  - leafCount: 6
     isCollected: 000000000000
+  - leafCount: 5
+    isCollected: 0000000000
