@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
     guid: 183dbd007e98c47bbba2bb5224036cc8
+  - enabled: 1
+    path: Assets/Scenes/Diary.unity
+    guid: 5d43bc7cb33e440a19757fe507776d0a
   m_configObjects: {}
