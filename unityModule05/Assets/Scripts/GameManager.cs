@@ -20,8 +20,7 @@ namespace Module04
 		private int _currentPoints = 0;
 		private int _totalPoints = 0;
 		[SerializeField] private StageInfo _stageInfo;
-
-
+		
 		public Action<int> OnHPChanged;
 		public Action<int> OnLeafCollected;
 		public Action OnPointNotEnough;
