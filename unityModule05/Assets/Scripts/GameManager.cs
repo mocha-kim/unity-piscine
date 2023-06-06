@@ -90,10 +90,12 @@ namespace Module04
 
 		public void LoadStage(int index)
 		{
+			_stageIndex = index;
 			PlayerPrefs.SetInt("Played", index);
+			PlayerHP = _initHP;
+			PlayerPrefs.SetInt("HP", _initHP);
 			_leavesCount = _stageInfo.GetCollectedCount(index);
 			_currentPoints = 0;
-			PlayerHP = _initHP;
 			SceneManager.LoadScene("Stage" + (index + 1));
 		}
 

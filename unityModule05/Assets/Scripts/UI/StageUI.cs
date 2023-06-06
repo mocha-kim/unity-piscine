@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Module04
 {
@@ -36,6 +37,9 @@ namespace Module04
             GameManager.Instance.OnLeafCollected -= UpdatePointText;
             GameManager.Instance.OnPointNotEnough -= DisplayWarningText;
         }
+        
+        public void OnClickBackToTitle() => SceneManager.LoadScene("MainMenu");
+        public void OnClickDiary() => SceneManager.LoadScene("Diary");
 
         private void DisplayWarningText()
         {
