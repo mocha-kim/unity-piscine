@@ -70,8 +70,9 @@ namespace Module04
 
 		public bool ClearStage()
 		{
-			if (_leavesCount == 5)
+			if (_leavesCount >= 5)
 			{
+				_stageIndex++;
 				LoadStage(_stageIndex % _stageInfo.StageCount);
 				return true;
 			}
@@ -81,7 +82,6 @@ namespace Module04
 
 		public void LoadStage(int index)
 		{
-
 			SceneManager.LoadScene("Stage" + (index + 1));
 		}    
 	}

@@ -9,6 +9,7 @@ namespace Module04
         private float _moveX;
 
         private SpriteRenderer _spriteRenderer;
+        private Collider2D _collider;
     
         public bool IsJumping => _isJumping;
         public float MoveX => _moveX;
@@ -16,6 +17,7 @@ namespace Module04
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _collider = GetComponent<Collider2D>();
         }
 
         private void Update()
