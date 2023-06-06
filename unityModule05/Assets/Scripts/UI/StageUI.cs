@@ -16,7 +16,7 @@ namespace Module04
 
         private void Awake()
         {
-            _warningText = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            _warningText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
             _warningText.gameObject.SetActive(false);
         }
 

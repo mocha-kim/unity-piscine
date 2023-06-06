@@ -59,7 +59,6 @@ namespace Module04
             transform.position = GameManager.Instance.PlayerInitPosition;
             animator.SetFloat("moveX", 0f);
             _controller.Init();
-			GameManager.Instance.Respawn();
         }
         
         public void OnDamaged(int damage)

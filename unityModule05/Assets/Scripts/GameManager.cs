@@ -15,11 +15,11 @@ namespace Module04
 		private int _deathCount = 0;
 
 		private int _stageIndex = 0;
+		private int _unlockIndex = 0;
 		private int _leavesCount = 0;
+		private int _totalPoints = 0;
 		[SerializeField] private StageInfo _stageInfo;
 
-		private int _unlockIndex = 0;
-		private int _totalPoints = 0;
 
 		public Action<int> OnHPChanged;
 		public Action<int> OnLeafCollected;
@@ -33,6 +33,7 @@ namespace Module04
 			set
 			{
 				_hp = value;
+				PlayerPrefs.SetInt("HP", _hp);
 				OnHPChanged?.Invoke(_hp);
 			}
 		}
@@ -50,7 +51,6 @@ namespace Module04
                 Destroy(gameObject);
             }
 
-            PlayerHP = _initHP;
             PlayerInitPosition = new Vector3(-6f, 1f, 0f);
         }
 
@@ -61,12 +61,14 @@ namespace Module04
 			_stageInfo.CollectLeaf(_stageIndex, index);
 			_leavesCount++;
 			_totalPoints += 5;
+			PlayerPrefs.SetInt("Points", _totalPoints);
 			OnLeafCollected?.Invoke(_totalPoints);
 		}
 
 		public void Respawn()
 		{
 			_deathCount++;
+			PlayerPrefs.SetInt("Death", _unlockIndex);
             PlayerHP = _initHP;
 		}
 
@@ -75,7 +77,8 @@ namespace Module04
 			if (_leavesCount >= 5)
 			{
 				_stageIndex = (_stageIndex + 1) % _stageInfo.StageCount;
-				_unlockIndex = _stageIndex;
+				_unlockIndex = Math.Max(_unlockIndex, _stageIndex);
+				PlayerPrefs.SetInt("Unlock", _unlockIndex);
 				LoadStage(_stageIndex);
 				return true;
 			}
@@ -85,9 +88,30 @@ namespace Module04
 
 		public void LoadStage(int index)
 		{
+			PlayerPrefs.SetInt("Played", index);
 			_leavesCount = _stageInfo.GetCollectedCount(index); 
 			Debug.Log("Stage1: " + (index + 1) + ", " + _leavesCount);
 			SceneManager.LoadScene("Stage" + (index + 1));
-		}    
+		}
+
+		public void NewGame()
+		{
+			PlayerPrefs.SetInt("HP", _initHP);
+			PlayerPrefs.SetInt("Death", 0);
+			PlayerPrefs.SetInt("Points", 0);
+			PlayerPrefs.SetInt("Played", 0);
+			PlayerPrefs.SetInt("Unlock", 0);
+			LoadGame();
+			_stageInfo.InitInfo();
+		}
+
+		public void LoadGame()
+		{
+			_hp = PlayerPrefs.GetInt("HP", _initHP);
+			_deathCount = PlayerPrefs.GetInt("Death", 0);
+			_totalPoints = PlayerPrefs.GetInt("Points", 0);
+			_stageIndex = PlayerPrefs.GetInt("Played", 0);
+			_unlockIndex = PlayerPrefs.GetInt("Unlock", 0);
+		}
 	}
 }

@@ -17,7 +17,7 @@ namespace Module04.StateMachine.Player
         public override void OnInit()
         {
             _isDeadId = Animator.StringToHash("isDead");
-            _blackPanel = GameObject.FindWithTag("Canvas").transform.GetChild(0).GetComponent<Image>();
+            _blackPanel = GameObject.FindWithTag("Canvas").transform.GetChild(3).GetComponent<Image>();
         }
 
         public override void OnEnter()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,25 +9,29 @@ namespace Module04
     [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/StageInfo")]
     public class StageInfo : ScriptableObject
     {
-        [SerializeField] private int[] _totalCounts;
-        private List<Dictionary<int, bool>> _isCollectedleaves = new();
-
-        public int StageCount => _totalCounts.Length;
-
-        private void OnValidate()
+        [Serializable]
+        public struct _Stage
         {
-            for (int i = 0; i < StageCount; i++)
+            public int leafCount;
+            public bool[] isCollected;
+        }
+        [SerializeField] private _Stage[] _isCollectedleaves;
+
+        public int StageCount => _isCollectedleaves.Length;
+
+        public void InitInfo()
+        {
+            foreach (var stage in _isCollectedleaves)
             {
-                _isCollectedleaves.Add(new Dictionary<int, bool>());
-                for (int j = 0; j < _totalCounts[i]; j++)
+                for (int i = 0; i < stage.isCollected.Length; i++)
                 {
-                    _isCollectedleaves[i][j] = false;
+                    stage.isCollected[i] = false;
                 }
             }
         }
 
-        public bool IsCollectedLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex];
-        public void CollectLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex] = true;
-        public int GetCollectedCount(int stageIndex) => _isCollectedleaves[stageIndex].Count(pair => pair.Value);
+        public bool IsCollectedLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex].isCollected[leafIndex];
+        public void CollectLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex].isCollected[leafIndex] = true;
+        public int GetCollectedCount(int stageIndex) => _isCollectedleaves[stageIndex].isCollected.Count(leaf => leaf);
     }
 }
