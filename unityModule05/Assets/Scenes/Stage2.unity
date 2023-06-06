@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1092318060}
   minPos: {x: 0, y: 0, z: -10}
-  maxPos: {x: 20, y: 10, z: -10}
+  maxPos: {x: 30, y: 15, z: -10}
 --- !u!1 &530300074
 GameObject:
   m_ObjectHideFlags: 0
