@@ -55,7 +55,7 @@ namespace Module04
 		{
 			if (_leavesCount == 5)
 			{
-				LoadStage(0);
+				LoadStage(_stageIndex);
 				return true;
 			}
 			OnPointNotEnough?.Invoke();
@@ -65,7 +65,7 @@ namespace Module04
 		public void LoadStage(int index)
 		{
 
-			SceneManager.LoadScene("Stage" + index);
+			SceneManager.LoadScene("Stage" + (index + 1));
 		}    
 	}
 }

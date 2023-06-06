@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f3a9924b6f04d75bbf91ca41ddafa4, type: 3}
   m_Name: data
   m_EditorClassIdentifier: 
-  _totalCounts: 
+  _totalCounts: 05000000
