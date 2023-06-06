@@ -10,14 +10,8 @@ namespace Module04.StateMachine.Liana
 
         public override void OnInit()
         {
+            _elapsedTime = 2.0f;
             _attackTriggerId = Animator.StringToHash("attackTrigger");
-        }
-
-        public override void OnEnter()
-        {
-            _elapsedTime = 0f;
-            _context.animator.SetTrigger(_attackTriggerId);
-            _context.PlayEffectSound(0);
         }
 
         public override void Update()

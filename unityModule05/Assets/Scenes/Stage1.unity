@@ -1661,7 +1661,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1779778657
+  m_SortingLayerID: 1055062183
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &995827397
@@ -2010,8 +2010,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.92521983, y: -1.47267}
-  m_Size: {x: 3.1495647, y: 0.66758305}
+  m_Offset: {x: -0.64244854, y: -1.5}
+  m_Size: {x: 2.5677478, y: 0.50000006}
   m_Direction: 1
 --- !u!114 &1092318067
 MonoBehaviour:

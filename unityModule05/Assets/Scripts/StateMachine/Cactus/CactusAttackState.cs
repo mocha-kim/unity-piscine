@@ -11,13 +11,8 @@ namespace Module04.StateMachine.Cactus
 
         public override void OnInit()
         {
+            _elapsedTime = 2.0f;
             _attackTriggerId = Animator.StringToHash("attackTrigger");
-        }
-
-        public override void OnEnter()
-        {
-            _elapsedTime = 0f;
-            _context.animator.SetTrigger(_attackTriggerId);
         }
 
         public override void Update()
