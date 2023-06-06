@@ -12,6 +12,7 @@ namespace Module04
 
 		private int _hp = 3;
 		private readonly int _initHP = 3;
+		private int _deathCount = 0;
 
 		private int _stageIndex = 0;
 		private int _leavesCount = 0;
@@ -19,12 +20,21 @@ namespace Module04
 
 		private int _totalPoints = 0;
 
-		public Action OnStageClear;
+		public Action<int> OnHPChanged;
+		public Action<int> OnLeafCollected;
 		public Action OnPointNotEnough;
 
         public bool IsGameOver { get; set; }
-        public int PlayerHP => _hp;
         public Vector3 PlayerInitPosition { get; private set; }
+        public int PlayerHP
+		{
+			get => _hp;
+			set
+			{
+				_hp = value;
+				OnHPChanged?.Invoke(_hp);
+			}
+		}
 
         private void Awake()
         {
@@ -38,7 +48,7 @@ namespace Module04
                 Destroy(gameObject);
             }
 
-            _hp = _initHP;
+            PlayerHP = _initHP;
             PlayerInitPosition = new Vector3(-6f, 1f, 0f);
         }
 
@@ -46,16 +56,23 @@ namespace Module04
 
 		public void CollectLeaf(int index)
 		{
-			_stageInfo.CollecteLeaf(_stageIndex, index);
+			_stageInfo.CollectLeaf(_stageIndex, index);
 			_leavesCount++;
 			_totalPoints += 5;
+			OnLeafCollected?.Invoke(_totalPoints);
+		}
+
+		public void Respawn()
+		{
+			_deathCount++;
+            PlayerHP = _initHP;
 		}
 
 		public bool ClearStage()
 		{
 			if (_leavesCount == 5)
 			{
-				LoadStage(_stageIndex);
+				LoadStage(_stageIndex % _stageInfo.StageCount);
 				return true;
 			}
 			OnPointNotEnough?.Invoke();

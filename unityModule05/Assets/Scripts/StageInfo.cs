@@ -10,9 +10,11 @@ namespace Module04
         [SerializeField] private int[] _totalCounts;
         private List<Dictionary<int, bool>> _isCollectedleaves = new();
 
+        public int StageCount => _totalCounts.Length;
+
         private void OnValidate()
         {
-            for (int i = 0; i < _totalCounts.Length; i++)
+            for (int i = 0; i < StageCount; i++)
             {
                 _isCollectedleaves.Add(new Dictionary<int, bool>());
                 for (int j = 0; j < _totalCounts[i]; j++)
@@ -23,6 +25,6 @@ namespace Module04
         }
 
         public bool IsCollectedLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex];
-        public void CollecteLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex] = true;
+        public void CollectLeaf(int stageIndex, int leafIndex) => _isCollectedleaves[stageIndex][leafIndex] = true;
     }
 }

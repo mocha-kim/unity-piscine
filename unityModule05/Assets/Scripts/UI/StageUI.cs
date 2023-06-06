@@ -10,6 +10,9 @@ namespace Module04
         private TextMeshProUGUI _warningText;
         private Color _textColor;
         private float _fadeTime = 1f;
+        
+        [SerializeField] private TextMeshProUGUI _hpText;
+        [SerializeField] private TextMeshProUGUI _pointText;
 
         private void Awake()
         {
@@ -19,11 +22,15 @@ namespace Module04
 
         private void Start()
         {
+            GameManager.Instance.OnHPChanged += UpdateHPText;
+            GameManager.Instance.OnLeafCollected += UpdateCountText;
             GameManager.Instance.OnPointNotEnough += DisplayWarningText;
         }
 
         private void OnDestory()
         {
+            GameManager.Instance.OnHPChanged -= UpdateHPText;
+            GameManager.Instance.OnLeafCollected -= UpdateCountText;
             GameManager.Instance.OnPointNotEnough -= DisplayWarningText;
         }
 
@@ -44,6 +51,16 @@ namespace Module04
             }
 
             _warningText.gameObject.SetActive(false);
+        }
+
+        private void UpdateHPText(int value)
+        {
+            _hpText.text = value.ToString();
+        }
+
+        private void UpdateCountText(int value)
+        {
+            _pointText.text = value.ToString();
         }
     }
 }
