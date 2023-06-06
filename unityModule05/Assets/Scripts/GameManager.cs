@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,8 +13,9 @@ namespace Module04
 		private int _hp = 3;
 		private readonly int _initHP = 3;
 
+		private int _stageIndex = 0;
 		private int _leavesCount = 0;
-		private bool[] _isCollectedleaves = new bool[5];
+		[SerializeField] private StageInfo _stageInfo;
 
 		private int _totalPoints = 0;
 
@@ -40,19 +42,11 @@ namespace Module04
             PlayerInitPosition = new Vector3(-6f, 1f, 0f);
         }
 
-		public bool IsCollectedLeaf(int index) => _isCollectedleaves[index];
-
-		public void InitLeaves()
-		{
-			for (int i = 0; i < 5; i++)
-			{
-				_isCollectedleaves[i] = false;
-			}
-		}
+		public bool IsCollectedLeaf(int index) => _stageInfo.IsCollectedLeaf(_stageIndex, index);
 
 		public void CollectLeaf(int index)
 		{
-			_isCollectedleaves[index] = true;
+			_stageInfo.CollecteLeaf(_stageIndex, index);
 			_leavesCount++;
 			_totalPoints += 5;
 		}
@@ -61,17 +55,16 @@ namespace Module04
 		{
 			if (_leavesCount == 5)
 			{
-				OnStageClear?.Invoke();
-				Debug.Log("clear");
+				LoadStage(0);
 				return true;
 			}
 			OnPointNotEnough?.Invoke();
-			Debug.Log("need more leaf");
 			return false;
 		}
 
 		public void LoadStage(int index)
 		{
+
 			SceneManager.LoadScene("Stage" + index);
 		}    
 	}

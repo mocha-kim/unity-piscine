@@ -41,7 +41,6 @@ namespace Module04
             _stateMachine.AddState(new PlayerRespawnState());
         }
 
-        // Update is called once per frame
         private void Update()
         {
             _stateMachine.Update();
