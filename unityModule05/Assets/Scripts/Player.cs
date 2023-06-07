@@ -21,6 +21,8 @@ namespace Module04
         public bool IsJumping => _controller.IsJumping;
         public float MoveX => _controller.MoveX;
         public Rigidbody2D Rigidbody => _rigidbody;
+
+        [SerializeField] private Vector3 _initPosition;
         
         private void Awake()
         {
@@ -56,7 +58,7 @@ namespace Module04
 
         public void Init()
         {
-            transform.position = GameManager.Instance.PlayerInitPosition;
+            transform.position = _initPosition;
             animator.SetFloat("moveX", 0f);
             _controller.Init();
         }
