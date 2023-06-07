@@ -64,6 +64,7 @@ namespace Module04
 			_totalPoints += 5;
 			_currentPoints += 5;
 			PlayerPrefs.SetInt("Points", _totalPoints);
+			PlayerPrefs.SetInt("Current", _currentPoints);
 			OnLeafCollected?.Invoke(_currentPoints);
 		}
 
@@ -90,21 +91,25 @@ namespace Module04
 
 		public void LoadStage(int index)
 		{
+			if (index != PlayerPrefs.GetInt("Played"))
+			{
+				PlayerHP = _initHP;
+				PlayerPrefs.SetInt("HP", _initHP);
+				_currentPoints = 0;
+				PlayerPrefs.SetInt("Current", _currentPoints);
+			}
 			_stageIndex = index;
 			PlayerPrefs.SetInt("Played", index);
-			PlayerHP = _initHP;
-			PlayerPrefs.SetInt("HP", _initHP);
 			_leavesCount = _stageInfo.GetCollectedCount(index);
-			_currentPoints = 0;
 			SceneManager.LoadScene("Stage" + (index + 1));
 		}
 
 		public void NewGame()
 		{
-			Debug.Log("New Data");
 			PlayerPrefs.SetInt("HP", _initHP);
 			PlayerPrefs.SetInt("Death", 0);
 			PlayerPrefs.SetInt("Points", 0);
+			PlayerPrefs.SetInt("Current", 0);
 			PlayerPrefs.SetInt("Played", 0);
 			PlayerPrefs.SetInt("Unlock", 0);
 			LoadGame();
@@ -113,10 +118,10 @@ namespace Module04
 
 		public void LoadGame()
 		{
-			Debug.Log("Load Data");
 			_hp = PlayerPrefs.GetInt("HP", _initHP);
 			_deathCount = PlayerPrefs.GetInt("Death", 0);
 			_totalPoints = PlayerPrefs.GetInt("Points", 0);
+			_currentPoints = PlayerPrefs.GetInt("Current", 0);
 			_stageIndex = PlayerPrefs.GetInt("Played", 0);
 			_unlockIndex = PlayerPrefs.GetInt("Unlock", 0);
 		}
