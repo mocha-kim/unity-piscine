@@ -26,7 +26,6 @@ namespace Module04
 		public Action OnPointNotEnough;
 
         public bool IsGameOver { get; set; }
-        public Vector3 PlayerInitPosition { get; private set; }
         public int PlayerHP
 		{
 			get => _hp;
@@ -51,8 +50,7 @@ namespace Module04
             {
                 Destroy(gameObject);
             }
-
-            PlayerInitPosition = new Vector3(-6f, 1f, 0f);
+            LoadGame();
         }
 
 		public bool IsCollectedLeaf(int index) => _stageInfo.IsCollectedLeaf(_stageIndex, index);
