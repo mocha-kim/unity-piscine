@@ -18,7 +18,7 @@ namespace Module04
 		private int _unlockIndex = 0;
 		private int _leavesCount = 0;
 		private int _currentPoints = 0;
-		private int _totalPoints = 0;
+		[SerializeField] private int _totalPoints = 0;
 		[SerializeField] private StageInfo _stageInfo;
 		
 		public Action<int> OnHPChanged;
@@ -101,6 +101,7 @@ namespace Module04
 
 		public void NewGame()
 		{
+			Debug.Log("New Data");
 			PlayerPrefs.SetInt("HP", _initHP);
 			PlayerPrefs.SetInt("Death", 0);
 			PlayerPrefs.SetInt("Points", 0);
@@ -112,6 +113,7 @@ namespace Module04
 
 		public void LoadGame()
 		{
+			Debug.Log("Load Data");
 			_hp = PlayerPrefs.GetInt("HP", _initHP);
 			_deathCount = PlayerPrefs.GetInt("Death", 0);
 			_totalPoints = PlayerPrefs.GetInt("Points", 0);
