@@ -21,7 +21,7 @@ namespace Actor
         {
             _controller = GetComponent<CharacterController>();
 
-            _speedIndex = Animator.StringToHash("Speed");
+            _speedIndex = Animator.StringToHash("speed");
             _animator = GetComponent<Animator>();
         }
 

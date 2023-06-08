@@ -24,6 +24,7 @@ namespace Actor
             _stateMachine = new StateMachine<Ghost>(this, new GhostIdleState());
             _stateMachine.AddState(new GhostPatrolState(_patrolPoints));
             _stateMachine.AddState(new GhostChaseState());
+            _stateMachine.AddState(new GhostVictoryState());
 
             navMeshAgent = GetComponent<NavMeshAgent>();
         }
