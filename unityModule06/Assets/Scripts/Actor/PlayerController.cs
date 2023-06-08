@@ -7,7 +7,7 @@ namespace Actor
     {
         private bool _isFPSMode = false;
 
-        private readonly float _rotateSpeed = 4f;
+        private readonly float _rotateSpeed = 8f;
         private readonly float _speed = 5f;
         private Vector3 _dirVector = Vector3.zero;
 
@@ -36,8 +36,6 @@ namespace Actor
                 _isFPSMode = !_isFPSMode;
             }
             
-            _dirVector.x = Input.GetAxis("Horizontal");
-            _dirVector.z = Input.GetAxis("Vertical");
             if (_isFPSMode)
             {
                 float yRotateSize = Input.GetAxis("Mouse X") * _rotateSpeed;
@@ -45,10 +43,19 @@ namespace Actor
 
                 transform.eulerAngles = new Vector3(0f, yRotate, 0f);
 
-                _dirVector = transform.forward * _dirVector.z + transform.right * _dirVector.x;
+                if (Input.GetKey(KeyCode.Z))
+                {
+                    _dirVector = transform.forward;
+                }
+                else
+                {
+                    _dirVector = Vector3.zero;
+                }
             }
             else
             {
+                _dirVector.x = Input.GetAxis("Horizontal");
+                _dirVector.z = Input.GetAxis("Vertical");
                 if (_dirVector != Vector3.zero)
                     transform.forward = _dirVector;
             }
