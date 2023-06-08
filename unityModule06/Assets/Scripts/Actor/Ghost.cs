@@ -29,7 +29,7 @@ namespace Actor
             navMeshAgent = GetComponent<NavMeshAgent>();
         }
 
-        private void OnEnable()
+        private void Start()
         {
             GameManager.Instance.OnAlertTarget += OnAlertTarget;
         }
@@ -52,7 +52,7 @@ namespace Actor
             }
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             GameManager.Instance.OnAlertTarget -= OnAlertTarget;
         }

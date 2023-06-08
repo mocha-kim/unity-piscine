@@ -25,7 +25,7 @@ namespace StateMachine.Ghost
         public override void Update()
         {
             _context.navMeshAgent.SetDestination(_target.transform.position);
-            if (_context.navMeshAgent.remainingDistance <= 0.5f)
+            if (Vector3.Distance(_context.transform.position, _target.transform.position) <= 0.5f)
             {
                 GameManager.Instance.OnCaughtTarget?.Invoke();
                 _stateMachine.ChangeState<GhostVictoryState>();
