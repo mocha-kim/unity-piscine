@@ -5,7 +5,7 @@ namespace Actor
 {
     public class PlayerController : MonoBehaviour
     {
-        private readonly float _speed = 3f;
+        private readonly float _speed = 5f;
         private Vector3 _dirVector = Vector3.zero;
         private Vector3 _jumpVector = Vector3.zero;
 

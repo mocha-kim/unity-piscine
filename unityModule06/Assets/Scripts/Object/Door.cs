@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    private readonly float _openSpeed = 50f;
+    private readonly float _openSpeed = 100f;
     private WaitForSeconds _wait = new WaitForSeconds(2f);
     
     private GameObject _door;
