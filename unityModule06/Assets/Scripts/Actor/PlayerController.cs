@@ -5,7 +5,7 @@ namespace Actor
 {
     public class PlayerController : MonoBehaviour
     {
-        private bool _isFPSMode = false;
+        private bool _isTPSMode = false;
 
         private readonly float _rotateSpeed = 8f;
         private readonly float _speed = 5f;
@@ -31,12 +31,13 @@ namespace Actor
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
-                _TPSCamera.SetActive(_isFPSMode);
-                _body.SetActive(_isFPSMode);
-                _isFPSMode = !_isFPSMode;
+                Cursor.visible = _isTPSMode;
+                _TPSCamera.SetActive(_isTPSMode);
+                _body.SetActive(_isTPSMode);
+                _isTPSMode = !_isTPSMode;
             }
             
-            if (_isFPSMode)
+            if (_isTPSMode)
             {
                 float yRotateSize = Input.GetAxis("Mouse X") * _rotateSpeed;
                 float yRotate = transform.eulerAngles.y + yRotateSize;
