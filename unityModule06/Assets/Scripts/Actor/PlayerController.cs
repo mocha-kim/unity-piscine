@@ -7,11 +7,7 @@ namespace Actor
     {
         private readonly float _speed = 5f;
         private Vector3 _dirVector = Vector3.zero;
-        private Vector3 _jumpVector = Vector3.zero;
-
-        private bool _isGrounded = true;
-        private readonly float _jumpHeight = 1.5f;
-        private readonly float _gravity = -20f;
+        
         private CharacterController _controller;
 
         private int _speedIndex;
@@ -27,23 +23,12 @@ namespace Actor
 
         private void Update()
         {
-            _isGrounded = _controller.isGrounded;
-            if (_isGrounded && _dirVector.y < 0)
-                _jumpVector.y = 0;
-
             _dirVector.x = Input.GetAxis("Horizontal");
             _dirVector.z = Input.GetAxis("Vertical");
             if (_dirVector != Vector3.zero)
                 transform.forward = _dirVector;
 
-            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
-            {
-                _jumpVector.y += Mathf.Sqrt(_jumpHeight * -2f * Physics.gravity.y);
-            }
-
-            _jumpVector.y += _gravity * Time.deltaTime;
-
-            _controller.Move((_jumpVector + _dirVector * _speed) * Time.deltaTime);
+            _controller.Move(_dirVector * _speed * Time.deltaTime);
             _animator.SetFloat(_speedIndex, _dirVector.magnitude);
         }
     }
