@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     private int maxStage = 1;
     private int curStage = 1;
+
+    private int keyCount = 0;
     
     private void Awake()
     {
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool IsCollectedAllKeys() => keyCount >= 3;
+    public void CollectKey() => keyCount++;
 
     public void RestartStage() => SceneManager.LoadScene("Stage" + curStage);
 
