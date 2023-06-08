@@ -28,10 +28,5 @@ namespace StateMachine.Ghost
                 _stateMachine.ChangeState<GhostPatrolState>();
             }
         }
-
-        public override void OnExit()
-        {
-            _context.animator.SetBool(_isWaitingId, false);
-        }
     }
 }

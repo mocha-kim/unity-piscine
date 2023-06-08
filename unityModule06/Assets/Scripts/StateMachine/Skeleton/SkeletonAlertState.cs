@@ -17,6 +17,7 @@ namespace StateMachine.Skeleton
         public override void OnEnter()
         {
             Debug.Log("Alert");
+            GameManager.Instance.OnAlertTarget?.Invoke();
             _context.animator.SetTrigger(_alertTargetId);
             _context.StartCoroutine(WaitDelay());
         }

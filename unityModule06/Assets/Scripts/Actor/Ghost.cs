@@ -23,8 +23,14 @@ namespace Actor
         {
             _stateMachine = new StateMachine<Ghost>(this, new GhostIdleState());
             _stateMachine.AddState(new GhostPatrolState(_patrolPoints));
+            _stateMachine.AddState(new GhostChaseState());
 
             navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        private void OnEnable()
+        {
+            GameManager.Instance.OnAlertTarget += OnAlertTarget;
         }
 
         private void Update()
@@ -41,8 +47,15 @@ namespace Actor
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                // _stateMachine.ChangeState<>();
+                _stateMachine.ChangeState<GhostChaseState>();
             }
         }
+
+        private void OnDisable()
+        {
+            GameManager.Instance.OnAlertTarget -= OnAlertTarget;
+        }
+
+        private void OnAlertTarget() => _stateMachine.ChangeState<GhostChaseState>();
     }
 }
