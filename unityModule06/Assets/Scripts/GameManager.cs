@@ -63,7 +63,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayOneShot(AudioClip clip)
     {
-        Debug.Log("Play " + clip);
         _sfxAudio.PlayOneShot(clip);
     }
 }
