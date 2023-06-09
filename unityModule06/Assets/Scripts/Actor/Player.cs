@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
 
     private void OnCaught()
     {
+        if (GameManager.Instance.IsPlayerDead) return;
         _animator.SetTrigger(_caughtIndex);
         GameManager.Instance.IsPlayerDead = true;
         StartCoroutine(RestartStage());
