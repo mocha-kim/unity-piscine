@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace Actor
 {
     public class PlayerController : MonoBehaviour
@@ -29,6 +28,8 @@ namespace Actor
 
         private void Update()
         {
+            if (GameManager.Instance.IsPlayerDead) return;
+            
             if (Input.GetKeyDown(KeyCode.C))
             {
                 Cursor.visible = _isTPSMode;

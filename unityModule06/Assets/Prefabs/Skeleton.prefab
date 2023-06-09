@@ -1373,6 +1373,7 @@ MonoBehaviour:
     m_Bits: 8
   _torch: {fileID: 1890705837970086867}
   animator: {fileID: 7443937772810384379}
+  alertClip: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
 --- !u!1 &6098162864480239097
 GameObject:
   m_ObjectHideFlags: 0

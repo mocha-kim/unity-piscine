@@ -13,10 +13,16 @@ public class GameManager : MonoBehaviour
     public Action OnAlertTarget;
     public Action OnCaughtTarget;
     public Action OnClearGame;
+    
+    [SerializeField] private AudioSource _sfxAudio;
+    [SerializeField] private AudioClip _restartClip;
+    [SerializeField] private AudioClip _winClip;
 
     private int maxStage = 1;
     private int curStage = 1;
     private int keyCount = 0;
+
+    public bool IsPlayerDead { get; set; }
 
     private void Awake()
     {
@@ -38,7 +44,9 @@ public class GameManager : MonoBehaviour
 
     public void RestartStage()
     {
+        IsPlayerDead = false;
         IsRestarted = true;
+        GameManager.Instance.PlayOneShot(_restartClip);
         SceneManager.LoadScene("Stage" + curStage);
     }
 
@@ -47,8 +55,15 @@ public class GameManager : MonoBehaviour
         if (curStage == maxStage)
         {
             OnClearGame?.Invoke();
+            PlayOneShot(_winClip);
             return;
         }
         curStage++;
+    }
+
+    public void PlayOneShot(AudioClip clip)
+    {
+        Debug.Log("Play " + clip);
+        _sfxAudio.PlayOneShot(clip);
     }
 }

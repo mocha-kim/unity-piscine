@@ -15,6 +15,7 @@ namespace Actor
         private float _range;
 
         public Animator animator;
+        public AudioClip alertClip;
         
         private void Awake()
         {
