@@ -11,7 +11,6 @@ public class StageUI : MonoBehaviour
     private Color _color = Color.white;
 
     private float _changeValue = 0f;
-    private readonly float _fadeTime = 3f;
 
     private void Awake()
     {
@@ -41,7 +40,7 @@ public class StageUI : MonoBehaviour
     {
         _color.a = 0f;
         _defeat.color = _color;
-        StartCoroutine(FadeIn(_defeat));
+        StartCoroutine(FadeIn(_win));
     }
 
     private void OnCaughtTarget()
@@ -56,7 +55,7 @@ public class StageUI : MonoBehaviour
         _changeValue = 0f;
         while (_color.a < 1f)
         {
-            _changeValue = Time.deltaTime / _fadeTime;
+            _changeValue = Time.deltaTime / 3f;
             _color.a += _changeValue;
             image.color = _color;
             yield return null;
@@ -68,7 +67,7 @@ public class StageUI : MonoBehaviour
         _changeValue = 0f;
         while (_color.a > 0f)
         {
-            _changeValue = Time.deltaTime / _fadeTime;
+            _changeValue = Time.deltaTime / 1f;
             _color.a -= _changeValue;
             image.color = _color;
             yield return null;

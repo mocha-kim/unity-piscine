@@ -1305,7 +1305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3cc7982f6508b4d2cb5d53715aa10849, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3770,7 +3770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ffe1ea5ec7c144e659f616b47b5956bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5827,7 +5827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6091,7 +6091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration
@@ -8255,7 +8255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5302655920257509031, guid: 20ea25f474f1b4b329b0199366d91d50, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5302655920257509031, guid: 20ea25f474f1b4b329b0199366d91d50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9081,7 +9081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9518,7 +9518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration
@@ -10258,7 +10258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10910,7 +10910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7069454277902217686, guid: e383a83ff032c48c083675e76fd71a38, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11112,7 +11112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration
