@@ -59,5 +59,4 @@ public class Player : MonoBehaviour
         PauseStepSound();
         GameManager.Instance.PlayOneShot(_faintClip);
     }
-
 }

@@ -5,6 +5,7 @@ namespace Actor
     public class PlayerController : MonoBehaviour
     {
         private bool _isTPSMode = false;
+        private bool _isClear = false;
 
         private readonly float _rotateSpeed = 8f;
         private readonly float _speed = 5f;
@@ -25,10 +26,15 @@ namespace Actor
             _speedIndex = Animator.StringToHash("speed");
             _animator = GetComponent<Animator>();
         }
+        
+        private void Start()
+        {
+            GameManager.Instance.OnClearGame += OnClearGame;
+        }
 
         private void Update()
         {
-            if (GameManager.Instance.IsPlayerDead) return;
+            if (GameManager.Instance.IsPlayerDead || _isClear) return;
             
             if (Input.GetKeyDown(KeyCode.C))
             {
@@ -64,5 +70,12 @@ namespace Actor
             _controller.Move(_dirVector * _speed * Time.deltaTime);
             _animator.SetFloat(_speedIndex, _dirVector.magnitude);
         }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnClearGame -= OnClearGame;
+        }
+
+        private void OnClearGame() => _isClear = true;
     }
 }

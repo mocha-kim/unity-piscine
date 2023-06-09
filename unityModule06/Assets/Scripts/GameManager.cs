@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Action OnCaughtTarget;
     public Action OnClearGame;
     
+    [SerializeField] private AudioSource _bgmAudio;
     [SerializeField] private AudioSource _sfxAudio;
     [SerializeField] private AudioClip _restartClip;
     [SerializeField] private AudioClip _winClip;
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         if (curStage == maxStage)
         {
             OnClearGame?.Invoke();
+            _bgmAudio.Stop();
             PlayOneShot(_winClip);
             return;
         }

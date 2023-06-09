@@ -3,7 +3,6 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     public Transform player;
-    
     public LayerMask layerMask;
     public Transform[] obstructions;
 
@@ -13,7 +12,7 @@ public class Camera : MonoBehaviour
     {
         oldHitsNumber = 0;
     }
-
+    
     private void LateUpdate()
     {
         viewObstructed();
@@ -21,8 +20,8 @@ public class Camera : MonoBehaviour
 
     void viewObstructed()
     {
-        float characterDistance = Vector3.Distance(transform.position, player.transform.position);
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, characterDistance, layerMask);
+        float distance = Vector3.Distance(transform.position, player.transform.position) - 0.1f;
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, distance, layerMask);
         if (hits.Length > 0)
         {
             int newHits = hits.Length - oldHitsNumber;

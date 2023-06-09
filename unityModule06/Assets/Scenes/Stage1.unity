@@ -6713,7 +6713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration
@@ -7780,6 +7780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10437470e1d774b7b8da8adeb3e69c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bgmAudio: {fileID: 1216850473}
   _sfxAudio: {fileID: 1216850474}
   _restartClip: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
   _winClip: {fileID: 8300000, guid: 4e59227415ed7d142a6a3b23959a0436, type: 3}
@@ -10096,7 +10097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration
@@ -10377,7 +10378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration
@@ -12172,7 +12173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885664861237198628, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780647748755279459, guid: c7bb07960de4a4cd98ff678124dd4103, type: 3}
       propertyPath: _startDuration

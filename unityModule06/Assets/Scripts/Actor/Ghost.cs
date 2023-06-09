@@ -32,6 +32,7 @@ namespace Actor
         private void Start()
         {
             GameManager.Instance.OnAlertTarget += OnAlertTarget;
+            GameManager.Instance.OnClearGame += OnClearGame;
         }
 
         private void Update()
@@ -55,8 +56,10 @@ namespace Actor
         private void OnDestroy()
         {
             GameManager.Instance.OnAlertTarget -= OnAlertTarget;
+            GameManager.Instance.OnClearGame -= OnClearGame;
         }
 
         private void OnAlertTarget() => _stateMachine.ChangeState<GhostChaseState>();
+        private void OnClearGame() => gameObject.SetActive(false);
     }
 }
